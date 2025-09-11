@@ -30,6 +30,185 @@ function Home() {
   }, []);
   return (
     <div className="home-bg">
+      <style>{`
+        .home-bg {
+          background: #fff;
+        }
+        .home-hero {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 64px 16px;
+          background: linear-gradient(rgba(10,61,98,0.85), rgba(10,61,98,0.85)), url('../assets/images/1.jpeg') center/cover no-repeat;
+          color: #fff;
+          background-attachment: fixed;
+          background-position: center;
+        }
+        .home-title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+        .home-subtext {
+          font-size: 1.25rem;
+          margin-bottom: 24px;
+        }
+        .home-cta-group {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
+          .home-cta-group {
+            flex-direction: row;
+          }
+        }
+        .btn {
+          padding: 12px 32px;
+          border-radius: 6px;
+          font-weight: 600;
+          font-size: 1rem;
+          text-decoration: none;
+          border: none;
+          cursor: pointer;
+          transition: background 0.2s, color 0.2s;
+        }
+        .btn-primary {
+          background: #E67E22;
+          color: #fff;
+        }
+        .btn-primary:hover {
+          background: #d35400;
+        }
+        .btn-secondary {
+          background: #fff;
+          color: #0A3D62;
+          border: 2px solid #E67E22;
+        }
+        .btn-secondary:hover {
+          background: #E67E22;
+          color: #fff;
+        }
+        .section-title {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 24px;
+          text-align: center;
+        }
+        .mission-values {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
+          .mission-values {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+        .mission-card {
+          background: #636E72;
+          color: #fff;
+          border-radius: 12px;
+          padding: 32px 24px;
+          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
+          width: 100%;
+          max-width: 320px;
+        }
+        .parallax-card {
+          transition: transform 0.4s cubic-bezier(.23,1,.32,1);
+        }
+        .low-opacity {
+          opacity: 0.85;
+          transition: opacity 0.3s, box-shadow 0.3s;
+          will-change: transform, opacity;
+        }
+        .low-opacity:hover {
+          opacity: 1;
+          box-shadow: 0 8px 24px rgba(10,61,98,0.18);
+        }
+        .home-mission {
+          margin-top: 48px;
+        }
+        .home-services {
+          margin-top: 48px;
+        }
+        .services-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
+          .services-grid {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+        .service-card {
+          background: #fff;
+          border: 2px solid #636E72;
+          border-radius: 12px;
+          padding: 32px 24px;
+          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
+          width: 100%;
+          max-width: 320px;
+        }
+        .home-why {
+          background: #f8f9fa;
+          padding: 48px 16px;
+        }
+        .why-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
+          .why-grid {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+        .why-card {
+          background: #fff;
+          border: 2px solid #E67E22;
+          border-radius: 12px;
+          padding: 32px 24px;
+          box-shadow: 0 2px 8px rgba(230,126,34,0.08);
+          width: 100%;
+          max-width: 320px;
+          color: #E67E22;
+        }
+        .home-footer-cta {
+          background: #0A3D62;
+          color: #fff;
+          text-align: center;
+          padding: 32px 16px;
+        }
+        .footer-cta-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 16px;
+        }
+        .footer-cta-group {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
+          .footer-cta-group {
+            flex-direction: row;
+            justify-content: center;
+          }
+        }
+      `}</style>
+
       {/* Hero Banner with Parallax */}
       <section className="home-hero parallax-bg">
         <h1 className="home-title">Capital Business Group</h1>

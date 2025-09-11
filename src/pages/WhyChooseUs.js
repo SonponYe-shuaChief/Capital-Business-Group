@@ -16,8 +16,44 @@ const reasons = [
 
 function WhyChooseUs() {
   return (
-  <div className="why-bg">
-  <h1 className="why-title">Why Choose Us</h1>
+    <div className="why-bg">
+      <style>{`
+        .why-bg {
+          background: #fff;
+          padding: 48px 16px;
+        }
+        .why-title {
+          font-size: 2rem;
+          font-weight: bold;
+          color: #0A3D62;
+          margin-bottom: 24px;
+          text-align: center;
+        }
+        .why-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+          justify-content: center;
+        }
+        .why-card {
+          background: #636E72;
+          color: #fff;
+          border-radius: 12px;
+          padding: 32px 24px;
+          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
+          width: 100%;
+          max-width: 320px;
+        }
+        .why-card h3 {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        .why-card p {
+          font-size: 1rem;
+        }
+      `}</style>
+      <h1 className="why-title">Why Choose Us</h1>
       <div className="why-grid">
         {reasons.map((reason, idx) => (
           <motion.div
