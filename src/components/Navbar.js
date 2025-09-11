@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
