@@ -16,9 +16,9 @@ const reasons = [
 
 function WhyChooseUs() {
   return (
-    <div className="bg-white py-12 px-4">
-      <h1 className="text-3xl font-bold text-[#0A3D62] mb-6 text-center">Why Choose Us</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+  <div className="why-bg">
+  <h1 className="why-title">Why Choose Us</h1>
+      <div className="why-grid">
         {reasons.map((reason, idx) => (
           <motion.div
             key={reason.title}
@@ -26,9 +26,9 @@ function WhyChooseUs() {
             whileInView="visible"
             variants={cardVariants}
             viewport={{ once: true }}
-            className="bg-[#636E72] text-white rounded-lg p-6 shadow-md"
+            className="why-card"
           >
-            <h3 className="font-bold text-lg mb-2">{reason.title}</h3>
+            <h3>{reason.title}</h3>
             <p>{reason.desc}</p>
           </motion.div>
         ))}

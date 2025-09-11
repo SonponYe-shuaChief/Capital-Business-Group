@@ -1,7 +1,3 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css';
-
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
@@ -13,18 +9,40 @@ const navLinks = [
 
 function Navbar() {
   const location = useLocation();
+  const [visible, setVisible] = useState(true);
+  const [activeTab, setActiveTab] = useState(location.pathname);
+
+  useEffect(() => {
+    let lastScroll = window.scrollY;
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll && currentScroll > 60) {
+        setVisible(false);
+      } else {
+        setVisible(true);
+      }
+      lastScroll = currentScroll;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setActiveTab(location.pathname);
+  }, [location.pathname]);
+
   return (
-    <nav className="sticky top-0 z-50 bg-[#0A3D62] text-white shadow-md">
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <Link to="/" className="font-bold text-xl tracking-wide flex items-center">
-          <span className="mr-2">🚗</span> Capital Business Group
+    <nav className={`navbar fade-navbar${visible ? ' fade-in' : ' fade-out'}`}> 
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <span className="navbar-logo-icon">🚗</span> Capital Business Group
         </Link>
-        <ul className="flex space-x-4">
+        <ul className="navbar-links">
           {navLinks.map(link => (
             <li key={link.name}>
               <Link
                 to={link.path}
-                className={`hover:text-[#E67E22] font-semibold transition-colors duration-200 ${location.pathname === link.path ? 'text-[#E67E22]' : ''}`}
+                className={`navbar-link${activeTab === link.path ? ' active tab-animate' : ''}`}
               >
                 {link.name}
               </Link>
