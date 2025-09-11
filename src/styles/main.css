@@ -1,0 +1,31 @@
+body {
+  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+  background: #fff;
+  color: #0A3D62;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Custom colors for Tailwind */
+:root {
+  --primary: #0A3D62;
+  --secondary: #636E72;
+  --accent: #E67E22;
+  --background: #fff;
+}
+
+/* Utility classes for sticky nav, etc. */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Responsive helpers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
