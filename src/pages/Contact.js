@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/images/1.jpeg';
+import bgImg from '../assets/images/1.jpeg';
 
 function Contact() {
   return (
@@ -7,12 +7,25 @@ function Contact() {
       <style>{`
         .contact-bg-img {
           position: relative;
-          background: linear-gradient(rgba(10,61,98,0.7), rgba(10,61,98,0.7)), url('../assets/images/1.jpeg') center/cover no-repeat;
+          background: url(${bgImg}) center/cover no-repeat;
           background-attachment: fixed;
           min-height: 100vh;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
+        }
+        .contact-bg-img::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(10, 20, 40, 0.85);
+          z-index: 1;
+        }
+        .contact-bg-img > * {
+          position: relative;
+          z-index: 2;
         }
         .contact-overlay {
           position: absolute;
@@ -27,54 +40,58 @@ function Contact() {
         .contact-title {
           color: #fff;
           text-shadow: 0 2px 16px rgba(10,61,98,0.18);
-          font-size: 2.2rem;
+          font-size: 2.5rem;
           font-weight: bold;
           margin-bottom: 32px;
           text-align: center;
+          margin-top: 48px;
         }
-        .contact-grid {
+        .contact-main {
           display: flex;
-          flex-wrap: wrap;
+          flex-direction: row;
           gap: 48px;
-          max-width: 1200px;
-          margin: 0 auto;
+          max-width: 1100px;
+          margin: 0 auto 48px auto;
           justify-content: center;
-          align-items: center;
+          align-items: stretch;
+         width: 95%;
         }
         .contact-form {
-          background: #fff;
-          border-radius: 16px;
-          padding: 40px 32px;
-          box-shadow: 0 6px 32px rgba(10,61,98,0.18);
+          background: #f8fcff;
+          border-radius: 24px;
+          padding: 40px 40px;
+          box-shadow: 0 8px 32px rgba(25,118,210,0.12);
           display: flex;
           flex-direction: column;
-          gap: 18px;
+          gap: 28px;
           flex: 1;
-          min-width: 320px;
-          max-width: 400px;
+          min-width: 340px;
+          max-width: 520px;
           align-items: center;
+          border: 1px solid #e3eaf5;
         }
+            min-height: 420px;
         .form-title {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           font-weight: bold;
           color: #E67E22;
-          margin-bottom: 12px;
+          margin-bottom: 16px;
           text-align: center;
         }
         .form-input {
           border: 1px solid #636E72;
-          border-radius: 8px;
-          padding: 12px;
-          font-size: 1.05rem;
+          border-radius: 10px;
+          padding: 16px;
+          font-size: 1.15rem;
           width: 100%;
           margin-bottom: 8px;
         }
         .btn.btn-primary {
           background: #E67E22;
           color: #fff;
-          font-size: 1.05rem;
-          padding: 12px 32px;
-          border-radius: 8px;
+          font-size: 1.15rem;
+          padding: 16px 40px;
+          border-radius: 10px;
           font-weight: 600;
           border: none;
           cursor: pointer;
@@ -87,25 +104,36 @@ function Contact() {
         .contact-info-group {
           display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 32px;
           flex: 1;
           min-width: 320px;
-          max-width: 400px;
+          max-width: 480px;
         }
+            justify-content: stretch;
         .contact-info {
-          background: #636E72;
-          color: #fff;
-          border-radius: 16px;
-          padding: 32px 24px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.18);
+          background: #f4f6fa;
+          color: #222;
+          border-radius: 24px;
+          padding: 48px 40px;
+          box-shadow: 0 4px 16px rgba(25,118,210,0.10);
+          border: 1px solid #e3eaf5;
         }
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         .info-title {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
           font-weight: bold;
-          margin-bottom: 8px;
+          margin-bottom: 12px;
+          color: #1976D2;
         }
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            text-align: left;
         .info-link {
-          color: #fff;
+          color: #1976D2;
           text-decoration: underline;
           transition: color 0.2s;
         }
@@ -113,25 +141,31 @@ function Contact() {
           color: #E67E22;
         }
         .contact-map {
-          background: #fff;
-          border-radius: 16px;
-          padding: 32px 24px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.18);
+          background: #f8fcff;
+          border-radius: 32px;
+          padding: 30px 30px;
+          box-shadow: 0 8px 32px rgba(25,118,210,0.12);
+          max-width: 1400px;
+            width: 95vw;
+          margin: 0 auto 48px auto;
+          border: 1px solid #e3eaf5;
         }
         .map-title {
-          font-size: 1.1rem;
+          font-size: 1.5rem;
           font-weight: bold;
-          margin-bottom: 8px;
-          color: #E67E22;
+          margin-bottom: 18px;
+          color: #1976D2;
         }
         .map-embed iframe {
           width: 100%;
-          height: 180px;
+          min-width: 300px;
+            max-width: 95vw;
+          height: 400px;
           border: none;
-          border-radius: 8px;
+          border-radius: 18px;
         }
         @media (max-width: 900px) {
-          .contact-grid {
+          .contact-main {
             flex-direction: column;
             align-items: center;
             max-width: 98vw;
@@ -141,11 +175,15 @@ function Contact() {
             min-width: 260px;
             max-width: 98vw;
           }
+          .contact-map {
+            max-width: 98vw;
+            padding: 24px 8px;
+          }
         }
       `}</style>
       <div className="contact-overlay"></div>
       <h1 className="contact-title">Contact / Book Service</h1>
-      <div className="contact-grid">
+      <div className="contact-main">
         {/* Booking Form */}
         <form className="contact-form">
           <h2 className="form-title">Book a Service</h2>
@@ -156,29 +194,23 @@ function Contact() {
           <textarea placeholder="Service Request" className="form-input" rows={3} required />
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        {/* Contact Info & Map */}
-        <div className="contact-info-group">
-          <div className="contact-info">
-            <h2 className="info-title">Contact Info</h2>
-            <p>Phone: <a href="tel:+1234567890" className="info-link">+1 234 567 890</a></p>
-            <p>Email: <a href="mailto:info@capitalbusinessgroup.com" className="info-link">info@capitalbusinessgroup.com</a></p>
-            <p>Address: 123 Main Street, City, Country</p>
-          </div>
-          <div className="contact-map">
-            <h2 className="map-title">Find Us</h2>
-            <div className="map-embed">
-              <iframe
-                title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363155047!3d-37.81627974202198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f7f7b1%3A0x5045675218ce6e0!2s123%20Main%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1633072800000!5m2!1sen!2sus"
-                width="100%"
-                height="160"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
+        {/* Contact Info */}
+   
+      </div>
+      {/* Map Full Width Below */}
+      <div className="contact-map">
+        <h2 className="map-title">Find Us</h2>
+        <div className="map-embed">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363155047!3d-37.81627974202198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f7f7b1%3A0x5045675218ce6e0!2s123%20Main%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sus!4v1633072800000!5m2!1sen!2sus"
+            width="100%"
+            height="320"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>
