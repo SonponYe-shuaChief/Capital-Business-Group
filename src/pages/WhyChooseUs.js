@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import bgImg from '../assets/images/1.jpeg';
+import expImg from '../assets/images/experience.jpeg';
+import techImg from '../assets/images/technicians.jpeg';
+import supplierImg from '../assets/images/1.jpeg';
+import onlineImg from '../assets/images/online expert.jpeg';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -7,50 +12,112 @@ const cardVariants = {
 };
 
 const reasons = [
-  { title: 'Trusted Expertise', desc: 'Decades of combined experience and proven results.' },
-  { title: 'Complete Solution', desc: 'From repairs to parts and online ordering.' },
-  { title: 'Quick Turnaround', desc: 'Fast, efficient service to minimize downtime.' },
-  { title: 'Transparent Pricing', desc: 'Clear, honest pricing for every service.' },
-  { title: 'Nationwide Reach', desc: 'Serving customers across the country.' },
+  { title: 'Trusted Expertise', desc: 'Decades of combined experience and proven results.', img: expImg },
+  { title: 'Complete Solution', desc: 'From repairs to parts and online ordering.', img: supplierImg },
+  { title: 'Quick Turnaround', desc: 'Fast, efficient service to minimize downtime.', img: techImg },
+  { title: 'Transparent Pricing', desc: 'Clear, honest pricing for every service.', img: onlineImg },
+  { title: 'Nationwide Reach', desc: 'Serving customers across the country.', img: supplierImg },
 ];
 
 function WhyChooseUs() {
+  const bgRef = useRef();
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (bgRef.current) {
+        bgRef.current.style.backgroundPositionY = `${scrollY * 0.3}px`;
+      }
+      document.querySelectorAll('.why-card').forEach((card, i) => {
+        const offset = scrollY * (0.08 + i * 0.02);
+        card.style.transform = `translateY(${offset}px) scale(1.04)`;
+      });
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <div className="why-bg">
+    <div className="why-bg" ref={bgRef}>
       <style>{`
         .why-bg {
-          background: #fff;
+          position: relative;
+          background: url(${bgImg}) center/cover no-repeat;
+          min-height: 100vh;
           padding: 48px 16px;
+          transition: background-position 0.3s;
+        }
+        .why-bg::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(10, 20, 40, 0.85);
+          z-index: 1;
+        }
+        .why-bg > * {
+          position: relative;
+          z-index: 2;
         }
         .why-title {
-          font-size: 2rem;
+          font-size: 2.5rem;
           font-weight: bold;
-          color: #0A3D62;
-          margin-bottom: 24px;
+          color: #fff;
+          margin-bottom: 40px;
           text-align: center;
+          letter-spacing: 1px;
+          text-shadow: 0 2px 8px rgba(10,61,98,0.18);
         }
         .why-grid {
           display: flex;
           flex-wrap: wrap;
-          gap: 24px;
+          gap: 48px;
           justify-content: center;
+          width: 100%;
+          margin-top: 32px;
         }
         .why-card {
-          background: #636E72;
+          position: relative;
+          background: rgba(99,110,114,0.85);
           color: #fff;
-          border-radius: 12px;
-          padding: 32px 24px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
+          border-radius: 32px;
+          padding: 0;
+          box-shadow: 0 8px 32px rgba(10,61,98,0.18);
           width: 100%;
-          max-width: 320px;
+          max-width: 600px;
+          min-height: 320px;
+          backdrop-filter: blur(2px);
+          overflow: hidden;
+          transition: transform 0.4s cubic-bezier(.23,1,.32,1);
         }
-        .why-card h3 {
-          font-size: 1.2rem;
+        .why-card-img {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 1;
+        }
+        .why-card-overlay {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(10, 61, 98, 0.7);
+          z-index: 2;
+        }
+        .why-card-content {
+          position: relative;
+          z-index: 3;
+          text-align: center;
+          padding: 48px 32px;
+        }
+        .why-card-content h3 {
+          font-size: 2rem;
           font-weight: bold;
-          margin-bottom: 8px;
+          margin-bottom: 18px;
         }
-        .why-card p {
-          font-size: 1rem;
+        .why-card-content p {
+          font-size: 1.25rem;
         }
       `}</style>
       <h1 className="why-title">Why Choose Us</h1>
@@ -62,10 +129,14 @@ function WhyChooseUs() {
             whileInView="visible"
             variants={cardVariants}
             viewport={{ once: true }}
-            className="why-card"
+            className="why-card parallax-card"
           >
-            <h3>{reason.title}</h3>
-            <p>{reason.desc}</p>
+            <img src={reason.img} alt={reason.title} className="why-card-img" />
+            <div className="why-card-overlay" />
+            <div className="why-card-content">
+              <h3>{reason.title}</h3>
+              <p>{reason.desc}</p>
+            </div>
           </motion.div>
         ))}
       </div>
