@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { FaCarSide, FaTools, FaUserShield, FaShippingFast, FaHandshake, FaRegClock, FaCogs, FaBoxes } from 'react-icons/fa';
+import heroImg from '../assets/images/1.jpeg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -29,7 +31,7 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <div className="home-bg">
+  <div className="home-bg">
       <style>{`
         .home-bg {
           background: #fff;
@@ -41,7 +43,7 @@ function Home() {
           justify-content: center;
           text-align: center;
           padding: 64px 16px;
-          background: linear-gradient(rgba(10,61,98,0.85), rgba(10,61,98,0.85)), url('../assets/images/1.jpeg') center/cover no-repeat;
+          background: linear-gradient(rgba(10,61,98,0.85), rgba(10,61,98,0.85)), url(${heroImg}) center/cover no-repeat;
           color: #fff;
           background-attachment: fixed;
           background-position: center;
@@ -211,11 +213,16 @@ function Home() {
 
       {/* Hero Banner with Parallax */}
       <section className="home-hero parallax-bg">
-        <h1 className="home-title">Capital Business Group</h1>
-        <p className="home-subtext">Your trusted partner for vehicle repairs, parts, and online ordering.</p>
+        <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
+          <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#E67E22' }} /> <br />
+          Capital Business Group
+        </motion.h1>
+        <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>
+          Your trusted partner for vehicle repairs, parts, and online ordering.
+        </motion.p>
         <div className="home-cta-group">
-          <Link to="/contact" className="btn btn-primary">Book a Service</Link>
-          <Link to="/shop" className="btn btn-secondary">Order Parts</Link>
+          <Link to="/contact" className="btn btn-primary"><FaTools style={{ marginRight: 8 }} /> Book a Service</Link>
+          <Link to="/shop" className="btn btn-secondary"><FaBoxes style={{ marginRight: 8 }} /> Order Parts</Link>
         </div>
       </section>
 
@@ -224,14 +231,17 @@ function Home() {
         <h2 className="section-title">Our Mission</h2>
         <div className="mission-values">
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card parallax-card low-opacity">
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Reliability</h3>
             <p>Consistent, dependable service for every customer.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card parallax-card low-opacity">
+            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Convenience</h3>
             <p>Easy booking, online ordering, and fast delivery.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card parallax-card low-opacity">
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Customer-first</h3>
             <p>Your satisfaction is our top priority.</p>
           </motion.div>
@@ -243,14 +253,17 @@ function Home() {
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card parallax-card low-opacity">
+            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
             <h3>Repairs</h3>
             <p>Expert maintenance and repair for all vehicle types.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card parallax-card low-opacity">
+            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
             <h3>Parts</h3>
             <p>OEM and aftermarket parts for every need.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card parallax-card low-opacity">
+            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
             <h3>Online Ordering</h3>
             <p>Order parts and accessories online, delivered nationwide.</p>
           </motion.div>
@@ -262,14 +275,17 @@ function Home() {
         <h2 className="section-title">Why Choose Us</h2>
         <div className="why-grid">
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card">
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Trust</h3>
             <p>Proven track record and trusted by thousands.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card">
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Transparency</h3>
             <p>Clear pricing and honest service.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card">
+            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Quick Turnaround</h3>
             <p>Fast service to get you back on the road.</p>
           </motion.div>
