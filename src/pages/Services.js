@@ -1,4 +1,5 @@
 import React from 'react';
+import bgImg from '../assets/images/1.jpeg';
 import { motion } from 'framer-motion';
 import { MdLocalGasStation, MdAssignment, MdSearch, MdBuild, MdSettingsInputComponent, MdRadioButtonChecked, MdAcUnit, MdSettings, MdElectricalServices, MdLabel, MdBatteryFull, MdCardGiftcard, MdLocalShipping, MdHandshake, MdShoppingCart } from 'react-icons/md';
 
@@ -39,24 +40,40 @@ function Services() {
     <div className="services-bg">
       <style>{`
         .services-bg {
-          background: #fff;
+          position: relative;
+          background: url(${bgImg}) center/cover no-repeat;
+          min-height: 100vh;
           padding: 48px 16px;
         }
+        .services-bg::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(12, 27, 58, 0.9);
+          z-index: 1;
+        }
+        .services-bg > * {
+          position: relative;
+          z-index: 2;
+        }
         .services-title {
-          font-size: 2rem;
+          font-size: 2.8rem;
           font-weight: bold;
-          color: #0A3D62;
-          margin-bottom: 24px;
+          color: #f8fcffff;
+          margin-bottom: 32px;
           text-align: center;
         }
         .services-section {
-          margin-bottom: 32px;
+          margin-bottom: 40px;
         }
         .services-section-title {
-          font-size: 1.2rem;
+          font-size: 1.7rem;
           font-weight: bold;
           color: #E67E22;
-          margin-bottom: 16px;
+          margin-bottom: 18px;
+          text-align: center;
         }
         .services-list {
           display: flex;
@@ -84,28 +101,30 @@ function Services() {
           flex-direction: column;
           align-items: center;
           background: #fff;
-          border: 2px solid #E67E22;
-          border-radius: 12px;
-          box-shadow: 0 2px 8px rgba(230,126,34,0.08);
-          padding: 24px 20px;
-          min-width: 120px;
-          max-width: 160px;
-          margin-bottom: 8px;
-          transition: transform 0.2s;
+          border: none;
+          border-radius: 16px;
+          box-shadow: 0 4px 16px rgba(25,118,210,0.18);
+          padding: 40px 32px;
+          min-width: 180px;
+          max-width: 220px;
+          margin-bottom: 12px;
+          transition: transform 0.2s, box-shadow 0.2s;
         }
         .service-item:hover {
-          transform: translateY(-4px) scale(1.04);
-          box-shadow: 0 4px 16px rgba(230,126,34,0.15);
+          transform: translateY(-6px) scale(1.06);
+          box-shadow: 0 8px 32px rgba(25,118,210,0.22);
         }
         .service-icon {
-          font-size: 2.2rem;
-          margin-bottom: 10px;
+          font-size: 2.8rem;
+          margin-bottom: 16px;
+          color: #1976D2;
         }
         .service-name {
-          font-size: 1.05rem;
-          font-weight: 600;
-          color: #0A3D62;
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #1976D2;
           text-align: center;
+          letter-spacing: 0.5px;
         }
       `}</style>
       <h1 className="services-title">Our Services</h1>
