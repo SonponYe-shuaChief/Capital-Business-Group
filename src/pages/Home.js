@@ -262,7 +262,7 @@ function Home() {
       <section className="home-hero parallax-bg">
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
-            <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#1976D2' }} /> <br />
+            <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#ffffffff' }} /> <br />
             Capital Business Group
           </motion.h1>
           <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>

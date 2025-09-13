@@ -131,6 +131,19 @@ function Services() {
       {/* Section 1: Vehicle Maintenance & Repair */}
       <motion.section initial="hidden" animate="visible" variants={sectionVariants} className="services-section">
         <h2 className="services-section-title">Vehicle Maintenance & Repair</h2>
+        <div style={{ maxWidth: '700px', margin: '0 auto 18px auto', fontSize: '1.08rem', color: '#f8fcffff', background: 'rgba(25, 118, 210, 0.13)', borderRadius: '8px', padding: '18px 16px' }}>
+          We offer a full range of maintenance and repair services, including:<br />
+          <ul style={{ margin: '10px 0 0 18px', color: '#E67E22' }}>
+            <li>Routine servicing (oil changes, filters, fluid checks)</li>
+            <li>MOT preparation and testing</li>
+            <li>Diagnostics and fault finding</li>
+            <li>Brake, clutch, suspension, and exhaust repairs</li>
+            <li>Tyre fitting and wheel alignment</li>
+            <li>Air-conditioning servicing and re-gassing</li>
+            <li>Engine, gearbox, and electrical system repairs</li>
+          </ul>
+          <br />Our skilled technicians use state-of-the-art diagnostic tools and follow manufacturer specifications to ensure your car gets the care it deserves.
+        </div>
         <ul className="services-list presentable-list">
           {maintenanceServices.map(service => (
             <li key={service.name} className="service-item">
@@ -143,6 +156,18 @@ function Services() {
       {/* Section 2: Parts & Accessories */}
       <motion.section initial="hidden" animate="visible" variants={sectionVariants} className="services-section">
         <h2 className="services-section-title">Parts & Accessories</h2>
+        <div style={{ maxWidth: '700px', margin: '0 auto 18px auto', fontSize: '1.08rem', color: '#f8fcffff', background: 'rgba(25, 118, 210, 0.13)', borderRadius: '8px', padding: '18px 16px' }}>
+          We stock and supply a wide range of vehicle parts and accessories for all major makes and models:<br />
+          <ul style={{ margin: '10px 0 0 18px', color: '#E67E22' }}>
+            <li>Genuine OEM parts and high-quality aftermarket options</li>
+            <li>Batteries, bulbs, wiper blades, and filters</li>
+            <li>Braking components, suspension kits, and steering parts</li>
+            <li>Tyres and alloy wheels</li>
+            <li>Car care products, oils, and consumables</li>
+            <li>Accessories such as phone mounts, mats, seat covers, and more</li>
+          </ul>
+          <br />Our knowledgeable team can help you choose the right part first time — saving you time and money.
+        </div>
         <ul className="services-list presentable-list">
           {partsServices.map(service => (
             <li key={service.name} className="service-item">
@@ -155,6 +180,15 @@ function Services() {
       {/* Section 3: Online Ordering & Delivery */}
       <motion.section initial="hidden" animate="visible" variants={sectionVariants} className="services-section">
         <h2 className="services-section-title">Online Ordering & Delivery</h2>
+        <div style={{ maxWidth: '700px', margin: '0 auto 18px auto', fontSize: '1.08rem', color: '#f8fcffff', background: 'rgba(25, 118, 210, 0.13)', borderRadius: '8px', padding: '18px 16px' }}>
+          We make it easy for customers to access the parts and accessories they need — wherever they are.<br />
+          <ul style={{ margin: '10px 0 0 18px', color: '#E67E22' }}>
+            <li>Flexible ordering options: Order by phone, email, or through our team directly</li>
+            <li>Nationwide delivery: Reliable shipping straight to your home, garage, or business</li>
+            <li>Trade support: We work with mechanics and fleet operators to supply parts quickly</li>
+          </ul>
+          <br />Whether you’re a trade customer or an individual, our online service is designed for convenience, speed, and reliability.
+        </div>
         <ul className="services-list presentable-list">
           {onlineServices.map(service => (
             <li key={service.name} className="service-item">

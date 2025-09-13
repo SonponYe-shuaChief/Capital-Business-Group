@@ -27,7 +27,7 @@ function About() {
           text-align: center;
         }
         .about-intro {
-          max-width: 700px;
+          max-width: 1200px;
           margin: 0 auto 40px auto;
           font-size: 1.5rem;
           line-height: 1.7;
@@ -132,7 +132,25 @@ function About() {
       <h1 className="about-title">About Us</h1>
       <motion.section initial="hidden" animate="visible" variants={cardVariants} className="about-intro">
         <div className="about-intro">
-          Capital Business Group is a modern business solutions provider, committed to helping individuals and companies grow with reliable services and innovation. With years of experience, we focus on trust, innovation, and customer success. Our vision is to deliver excellence, support business growth, and remain a reliable partner for the future.
+          <strong>At Capital Business Group we are passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</strong> With years of experience in the automotive sector, we provide a comprehensive range of services — from vehicle repairs and maintenance, to retailing high-quality parts and accessories, to convenient online ordering and delivery.<br /><br />
+          <strong>Our mission is simple:</strong><br />
+          <ul style={{ margin: '16px 0 24px 24px', fontSize: '1.1rem', color: '#0A3D62' }}>
+            <li><strong>Reliability:</strong> Deliver top-quality work and products you can trust.</li>
+            <li><strong>Convenience:</strong> Make car care easy with both in-person and online solutions.</li>
+            <li><strong>Customer-first service:</strong> Put you back on the road quickly and confidently.</li>
+          </ul>
+          Whether you’re a car owner, a fleet manager, or a DIY enthusiast, we have the skills, parts, and digital solutions to keep your vehicle running smoothly.<br /><br />
+          <strong>Our Experience</strong><br />
+          At Capital Business Group, experience isn’t just about the number of years we’ve been in business — it’s about the knowledge, skill, and trust we’ve built with every customer we’ve served.<br /><br />
+          With close to a decade of experience in the automotive industry, we’ve worked on everything from small family cars to commercial fleets. Our technicians are fully trained and stay up to date with the latest vehicle technology, ensuring we can service modern vehicles with complex electronic systems as well as older, classic models.<br /><br />
+          <strong>Our Track Record</strong>
+          <ul style={{ margin: '16px 0 24px 24px', fontSize: '1.1rem', color: '#0A3D62' }}>
+            <li>Thousands of vehicles serviced — from routine MOTs to major repairs</li>
+            <li>Long-standing supplier relationships — allowing us to source genuine and aftermarket parts quickly and at competitive prices</li>
+            <li>Trusted by individuals and businesses — including fleet operators, car enthusiasts, and garages across the UK</li>
+            <li>Proven online expertise — delivering parts and accessories nationwide through our service</li>
+          </ul>
+          We believe our experience shows in everything we do: clear communication, attention to detail, and work that stands the test of time.
         </div>
       </motion.section>
       <section className="about-highlights">

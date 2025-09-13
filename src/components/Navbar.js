@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
+import logo from '../assets/images/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -54,8 +55,9 @@ function Navbar() {
   return (
     <nav className={`navbar fade-navbar${visible ? ' fade-in' : ' fade-out'}`}> 
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          <span className="navbar-logo-icon">🚗</span> Capital Business Group
+        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <img src={logo} alt="Logo" style={{ height: '42px', width: '42px', objectFit: 'contain', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }} />
+          <span style={{ fontWeight: 'bold', fontSize: '1.15rem', color: '#0A3D62' }}>Capital Business Group</span>
         </Link>
         {/* Hamburger for mobile */}
         <button
