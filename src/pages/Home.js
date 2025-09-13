@@ -30,13 +30,16 @@ function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
-  <div className="home-bg">
+    <div className="home-bg">
       <style>{`
         .home-bg {
           background: #f7fafc;
           font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
         }
+
+        /* Hero Section */
         .home-hero {
           display: flex;
           flex-direction: column;
@@ -81,9 +84,12 @@ function Home() {
           text-decoration: none;
           border: none;
           cursor: pointer;
-          transition: background 0.2s, color 0.2s;
+          transition: background 0.2s, color 0.2s, transform 0.2s;
           width: 90vw;
           max-width: 320px;
+        }
+        .btn:hover {
+          transform: translateY(-2px);
         }
         .btn-primary {
           background: #E67E22;
@@ -101,113 +107,50 @@ function Home() {
           background: #E67E22;
           color: #fff;
         }
+
+        /* Section Titles */
         .section-title {
           font-size: 1.5rem;
           font-weight: bold;
           margin-bottom: 18px;
           text-align: center;
         }
-        .mission-values {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          align-items: center;
-        }
-        .mission-card {
-          background: #636E72;
-          color: #fff;
-          border-radius: 12px;
-          padding: 20px 12px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
-          width: 90vw;
-          max-width: 320px;
-          font-size: 0.95rem;
-        }
-        .parallax-card {
-          transition: transform 0.4s cubic-bezier(.23,1,.32,1);
-        }
-        .low-opacity {
-          opacity: 0.85;
-          transition: opacity 0.3s, box-shadow 0.3s;
-          will-change: transform, opacity;
-        }
-        .low-opacity:hover {
-          opacity: 1;
-          box-shadow: 0 8px 24px rgba(10,61,98,0.18);
-        }
-        .home-mission {
-          margin-top: 32px;
-        }
-        .home-services {
-          margin-top: 32px;
-        }
-        .services-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          align-items: center;
-        }
-        .service-card {
+
+        /* Unified Card Style */
+        .info-card {
           background: #fff;
-          border: 2px solid #636E72;
           border-radius: 12px;
-          padding: 20px 12px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
-          width: 90vw;
-          max-width: 320px;
+          padding: 24px 16px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+          width: 85vw;
+          max-width: 380px;
           font-size: 0.95rem;
-        }
-        .home-why {
-          background: #f8f9fa;
-          padding: 32px 8px;
-        }
-        .why-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          align-items: center;
-        }
-        .why-card {
-          background: #fff;
-          border: 2px solid #E67E22;
-          border-radius: 12px;
-          padding: 20px 12px;
-          box-shadow: 0 2px 8px rgba(230,126,34,0.08);
-          width: 90vw;
-          max-width: 320px;
-          color: #E67E22;
-          font-size: 0.95rem;
-        }
-        .home-footer-cta {
-          background: #0A3D62;
-          color: #fff;
           text-align: center;
-          padding: 24px 8px;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .footer-cta-title {
+        .info-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+        .info-card h3 {
           font-size: 1.2rem;
-          font-weight: bold;
-          margin-bottom: 12px;
+          margin-bottom: 8px;
         }
-        .footer-cta-group {
+        .info-card p {
+          font-size: 0.95rem;
+          color: #555;
+        }
+
+        /* Grid Layouts */
+        .mission-values, .services-grid, .why-grid {
           display: flex;
           flex-direction: column;
-          gap: 12px;
           align-items: center;
+          gap: 20px;
+          margin: 0 auto;
         }
-        /* Mobile specific tweaks */
-        @media (min-width: 480px) {
-          .home-hero-img {
-            width: 240px;
-            height: 240px;
-          }
-          .home-title {
-            font-size: 2.2rem;
-          }
-          .section-title {
-            font-size: 1.7rem;
-          }
-        }
+
+        /* Responsive Adjustments */
         @media (min-width: 768px) {
           .home-hero {
             flex-direction: row;
@@ -230,39 +173,33 @@ function Home() {
             flex-direction: row;
             gap: 16px;
           }
-          .mission-values {
+          .mission-values, .services-grid, .why-grid {
             flex-direction: row;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 24px;
           }
-          .services-grid {
-            flex-direction: row;
-            justify-content: center;
-            gap: 24px;
-          }
-          .why-grid {
-            flex-direction: row;
-            justify-content: center;
-            gap: 24px;
-          }
-          .mission-card, .service-card, .why-card {
-            width: 100%;
-            max-width: 320px;
-            font-size: 1rem;
-            padding: 32px 24px;
-          }
-          .home-mission, .home-services {
-            margin-top: 48px;
-          }
-          .home-why {
-            padding: 48px 16px;
-          }
-          .home-footer-cta {
-            padding: 32px 16px;
-          }
-          .footer-cta-title {
-            font-size: 1.5rem;
-          }
+        }
+
+        /* Footer CTA */
+        .home-footer-cta {
+          background: #0A3D62;
+          color: #fff;
+          text-align: center;
+          padding: 32px 16px;
+        }
+        .footer-cta-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
+        .footer-cta-group {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          align-items: center;
+        }
+        @media (min-width: 768px) {
           .footer-cta-group {
             flex-direction: row;
             gap: 16px;
@@ -270,9 +207,8 @@ function Home() {
         }
       `}</style>
 
-      {/* Hero Banner with Parallax & Image */}
+      {/* Hero Banner */}
       <section className="home-hero parallax-bg">
-        <img src={heroImg} alt="Professional" className="home-hero-img" />
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
             <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#1976D2' }} /> <br />
@@ -292,39 +228,39 @@ function Home() {
       <section className="home-mission">
         <h2 className="section-title">Our Mission</h2>
         <div className="mission-values">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card parallax-card low-opacity">
-            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#1976D2' }} />
             <h3>Reliability</h3>
             <p>Consistent, dependable service for every customer.</p>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card parallax-card low-opacity">
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
             <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Convenience</h3>
             <p>Easy booking, online ordering, and fast delivery.</p>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card parallax-card low-opacity">
-            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
             <h3>Customer-first</h3>
             <p>Your satisfaction is our top priority.</p>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid Preview */}
+      {/* Services */}
       <section className="home-services">
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card parallax-card low-opacity">
-            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
+            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#1976D2' }} />
             <h3>Repairs</h3>
             <p>Expert maintenance and repair for all vehicle types.</p>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card parallax-card low-opacity">
-            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
+            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Parts</h3>
             <p>OEM and aftermarket parts for every need.</p>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card parallax-card low-opacity">
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
             <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
             <h3>Online Ordering</h3>
             <p>Order parts and accessories online, delivered nationwide.</p>
@@ -336,18 +272,18 @@ function Home() {
       <section className="home-why">
         <h2 className="section-title">Why Choose Us</h2>
         <div className="why-grid">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card">
-            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card">
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#1976D2' }} />
             <h3>Trust</h3>
             <p>Proven track record and trusted by thousands.</p>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card">
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card">
             <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
             <h3>Transparency</h3>
             <p>Clear pricing and honest service.</p>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card">
-            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card">
+            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
             <h3>Quick Turnaround</h3>
             <p>Fast service to get you back on the road.</p>
           </motion.div>
@@ -365,4 +301,5 @@ function Home() {
     </div>
   );
 }
+
 export default Home;
