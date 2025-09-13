@@ -263,7 +263,7 @@ function Home() {
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
             <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#ffffffff' }} /> <br />
-            Capital Business Group
+            <span style={{ color: '#fff' }}>Capital Business Group</span>
           </motion.h1>
           <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>
             Your trusted partner for vehicle repairs, parts, and online ordering.
