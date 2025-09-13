@@ -20,8 +20,48 @@ function ImageCarousel() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div style={{width: '100%', display: 'flex', justifyContent: 'center', margin: '32px 0'}}>
-      <img src={carouselImages[current]} alt="carousel" style={{maxWidth: '600px', width: '100%', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)', transition: 'opacity 0.5s'}} />
+    <div
+      style={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: window.innerWidth < 600 ? '12px' : '32px',
+        margin: window.innerWidth < 600 ? '16px 0' : '32px 0',
+        flexWrap: window.innerWidth < 600 ? 'wrap' : 'nowrap',
+      }}
+    >
+      {carouselImages.map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          alt={`carousel-${idx}`}
+          style={{
+            maxWidth:
+              window.innerWidth < 600
+                ? idx === current
+                  ? '90vw'
+                  : '32vw'
+                : idx === current
+                ? '600px'
+                : '220px',
+            width:
+              window.innerWidth < 600
+                ? idx === current
+                  ? '90vw'
+                  : '32vw'
+                : idx === current
+                ? '100%'
+                : '120px',
+            borderRadius: '12px',
+            boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+            opacity: idx === current ? 1 : 0.4,
+            filter: idx === current ? 'none' : 'blur(0.6px)',
+            transition: 'all 0.5s',
+            zIndex: idx === current ? 2 : 1,
+          }}
+        />
+      ))}
     </div>
   );
 }
