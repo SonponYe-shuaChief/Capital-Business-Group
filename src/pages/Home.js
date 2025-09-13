@@ -1,17 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCarSide, FaTools, FaUserShield, FaShippingFast, FaHandshake, FaRegClock, FaCogs, FaBoxes } from 'react-icons/fa';
 import heroImg from '../assets/images/1.jpeg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import reliabilityImg from '../assets/images/reliabilty.jpeg';
-import convenienceImg from '../assets/images/online expert.jpeg';
-import customerImg from '../assets/images/customer service.jpeg';
-import repairsImg from '../assets/images/technicians.jpeg';
-import partsImg from '../assets/images/parts.jpeg';
-import orderingImg from '../assets/images/oil change.jpeg';
-import trustImg from '../assets/images/experience.jpeg';
-import transparencyImg from '../assets/images/tools.jpeg';
-import quickImg from '../assets/images/quick turnaround.jpeg';
+
+const carouselImages = [
+  require('../assets/images/quick turnaround.jpeg'),
+  require('../assets/images/customer service.jpeg'),
+  
+  require('../assets/images/online expert.jpeg'),
+];
+
+function ImageCarousel() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % carouselImages.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <div style={{width: '100%', display: 'flex', justifyContent: 'center', margin: '32px 0'}}>
+      <img src={carouselImages[current]} alt="carousel" style={{maxWidth: '600px', width: '100%', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)', transition: 'opacity 0.5s'}} />
+    </div>
+  );
+}
 
 const heroVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -56,35 +69,31 @@ function Home() {
           justify-content: center;
           text-align: center;
           padding: 32px 8px;
-          background: linear-gradient(rgba(25,118,210,0.85), rgba(230,126,34,0.85)), url(${heroImg}) center/cover no-repeat;
+          background: linear-gradient(rgba(25,118,210,0.85), rgba(241, 217, 79, 0.55)), url(${heroImg}) center/cover no-repeat;
           color: #fff;
           background-attachment: fixed;
           background-position: center;
           gap: 24px;
         }
-        .home-hero-img {
-          width: 180px;
-          height: 180px;
-          object-fit: cover;
-          border-radius: 18px;
-          box-shadow: 0 4px 16px rgba(25,118,210,0.18);
-          margin-bottom: 16px;
-        }
+
         .home-title {
           font-size: 2rem;
           font-weight: bold;
           margin-bottom: 12px;
         }
+
         .home-subtext {
           font-size: 1rem;
           margin-bottom: 18px;
         }
+
         .home-cta-group {
           display: flex;
           flex-direction: column;
           gap: 12px;
           align-items: center;
         }
+
         .btn {
           padding: 10px 20px;
           border-radius: 6px;
@@ -126,7 +135,7 @@ function Home() {
         }
 
         /* Unified Card Style */
-        .info-card {
+        .info-card, .mission-card, .service-card, .why-card {
           background: #fff;
           border-radius: 12px;
           padding: 24px 16px;
@@ -137,44 +146,17 @@ function Home() {
           text-align: center;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .info-card:hover {
+        .info-card:hover, .mission-card:hover, .service-card:hover, .why-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 6px 16px rgba(0,0,0,0.1);
         }
-        .info-card h3 {
+        .info-card h3, .mission-card h3, .service-card h3, .why-card h3 {
           font-size: 1.2rem;
           margin-bottom: 8px;
         }
-        .info-card p {
+        .info-card p, .mission-card p, .service-card p, .why-card p {
           font-size: 0.95rem;
           color: #555;
-        }
-
-        /* Card background and overlay */
-        .card-bg {
-          position: relative;
-          background-size: cover;
-          background-position: center;
-          border-radius: 12px;
-          overflow: hidden;
-          min-height: 220px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 340px;
-          max-width: 90vw;
-          margin: 0 auto;
-        }
-        .card-overlay {
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
-          background: rgba(20, 30, 40, 0.38);
-          z-index: 1;
-        }
-        .card-content {
-          position: relative;
-          z-index: 2;
-          color: #fff;
         }
 
         /* Grid Layouts */
@@ -182,22 +164,15 @@ function Home() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 4px;
+          gap: 16px;
           margin: 0 auto;
         }
 
-        /* Responsive Adjustments */
         @media (min-width: 768px) {
           .home-hero {
             flex-direction: row;
             text-align: left;
             padding: 64px 16px;
-            gap: 5px;
-          }
-          .home-hero-img {
-            width: 340px;
-            height: 340px;
-            margin-bottom: 0;
           }
           .home-title {
             font-size: 2.5rem;
@@ -213,11 +188,7 @@ function Home() {
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 100px;
-          }
-          .card-bg {
-            margin-left: -2px;
-            margin-right: -2px;
+            gap: 40px;
           }
         }
 
@@ -263,34 +234,27 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* Carousel Section After Hero */}
+      <ImageCarousel />
 
       {/* Mission Statement */}
       <section className="home-mission">
         <h2 className="section-title">Our Mission</h2>
-    <div className="mission-values">
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-              <h3>Reliability</h3>
-              <p>Consistent, dependable service for every customer.</p>
-            </div>
+        <div className="mission-values">
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="mission-card">
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <h3>Reliability</h3>
+            <p>Consistent, dependable service for every customer.</p>
           </motion.div>
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-              <h3>Convenience</h3>
-              <p>Easy booking, online ordering, and fast delivery.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="mission-card">
+            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <h3>Convenience</h3>
+            <p>Easy booking, online ordering, and fast delivery.</p>
           </motion.div>
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-              <h3>Customer-first</h3>
-              <p>Your satisfaction is our top priority.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="mission-card">
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <h3>Customer-first</h3>
+            <p>Your satisfaction is our top priority.</p>
           </motion.div>
         </div>
       </section>
@@ -299,29 +263,20 @@ function Home() {
       <section className="home-services">
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
-              <h3>Repairs</h3>
-              <p>Expert maintenance and repair for all vehicle types.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="service-card">
+            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+            <h3>Repairs</h3>
+            <p>Expert maintenance and repair for all vehicle types.</p>
           </motion.div>
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
-              <h3>Parts</h3>
-              <p>OEM and aftermarket parts for every need.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="service-card">
+            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+            <h3>Parts</h3>
+            <p>OEM and aftermarket parts for every need.</p>
           </motion.div>
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
-              <h3>Online Ordering</h3>
-              <p>Order parts and accessories online, delivered nationwide.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="service-card">
+            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+            <h3>Online Ordering</h3>
+            <p>Order parts and accessories online, delivered nationwide.</p>
           </motion.div>
         </div>
       </section>
@@ -330,32 +285,24 @@ function Home() {
       <section className="home-why">
         <h2 className="section-title">Why Choose Us</h2>
         <div className="why-grid">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-              <h3>Trust</h3>
-              <p>Proven track record and trusted by thousands.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="why-card">
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <h3>Trust</h3>
+            <p>Proven track record and trusted by thousands.</p>
           </motion.div>
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-              <h3>Transparency</h3>
-              <p>Clear pricing and honest service.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="why-card">
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <h3>Transparency</h3>
+            <p>Clear pricing and honest service.</p>
           </motion.div>
-            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
-            <div className="card-overlay"></div>
-            <div className="card-content">
-              <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-              <h3>Quick Turnaround</h3>
-              <p>Fast service to get you back on the road.</p>
-            </div>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="why-card">
+            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <h3>Quick Turnaround</h3>
+            <p>Fast service to get you back on the road.</p>
           </motion.div>
         </div>
       </section>
+
 
       {/* Footer CTA */}
       <section className="home-footer-cta">
