@@ -1,24 +1,27 @@
+
 body {
-  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
-  background: #fff;
-  color: #0A3D62;
+  font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
+  background: #f7fafc;
+  color: #222e3a;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', 'Segoe UI', 'Arial', sans-serif;
-  font-weight: bold;
+  font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
+  font-weight: 600;
+  color: #1976D2;
 }
+
 
 /* Navbar */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #0A3D62;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(10,61,98,0.08);
+  background: #fff;
+  color: #1976D2;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.08);
 }
 .navbar-container {
   max-width: 1200px;
@@ -34,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   letter-spacing: 1px;
+  color: #1976D2;
 }
 .navbar-logo-icon {
   margin-right: 8px;
@@ -46,19 +50,22 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 .navbar-link {
-  color: #fff;
+  color: #1976D2;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 8px;
+  padding: 8px 16px;
 }
 .navbar-link:hover,
 .navbar-link.active {
-  color: #E67E22;
+  color: #fff;
+  background: #1976D2;
 }
 
 /* Footer */
 .footer {
-  background: #0A3D62;
+  background: linear-gradient(90deg, #1976D2 60%, #E67E22 100%);
   color: #fff;
   padding: 32px 0 24px 0;
   margin-top: 32px;

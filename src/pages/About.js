@@ -15,8 +15,9 @@ function About() {
     <div className="about-bg">
       <style>{`
         .about-bg {
-          background: #fff;
+          background: #f7fafc;
           padding: 48px 16px;
+          font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
         }
         .about-title {
           font-size: 3rem;
@@ -31,6 +32,13 @@ function About() {
           font-size: 1.5rem;
           line-height: 1.7;
         }
+          .about-intro {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #222e3a;
+          }
         .about-highlights {
           display: flex;
           flex-direction: column;
@@ -91,8 +99,9 @@ function About() {
       `}</style>
       <h1 className="about-title">About Us</h1>
       <motion.section initial="hidden" animate="visible" variants={cardVariants} className="about-intro">
-        <p className="text-lg mb-4">Capital Business Group is your trusted partner for vehicle maintenance, repairs, and parts. With over 10 years of experience, we have serviced thousands of vehicles and built strong relationships with suppliers and customers alike.</p>
-        <p className="text-lg mb-4">Our team of skilled technicians is dedicated to providing reliable, convenient, and customer-first service. We are trusted by individuals and businesses, and our online expertise ensures you get the best solutions, fast.</p>
+        <div className="about-intro">
+          Capital Business Group is a modern business solutions provider, committed to helping individuals and companies grow with reliable services and innovation. With years of experience, we focus on trust, innovation, and customer success. Our vision is to deliver excellence, support business growth, and remain a reliable partner for the future.
+        </div>
       </motion.section>
       <section className="about-highlights">
         <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="about-card">

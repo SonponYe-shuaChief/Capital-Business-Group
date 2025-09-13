@@ -34,19 +34,28 @@ function Home() {
   <div className="home-bg">
       <style>{`
         .home-bg {
-          background: #fff;
+          background: #f7fafc;
+          font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
         }
         .home-hero {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           align-items: center;
           justify-content: center;
-          text-align: center;
+          text-align: left;
           padding: 64px 16px;
-          background: linear-gradient(rgba(10,61,98,0.85), rgba(10,61,98,0.85)), url(${heroImg}) center/cover no-repeat;
+          background: linear-gradient(rgba(25,118,210,0.85), rgba(230,126,34,0.85)), url(${heroImg}) center/cover no-repeat;
           color: #fff;
           background-attachment: fixed;
           background-position: center;
+          gap: 48px;
+        }
+        .home-hero-img {
+          width: 340px;
+          height: 340px;
+          object-fit: cover;
+          border-radius: 24px;
+          box-shadow: 0 8px 32px rgba(25,118,210,0.18);
         }
         .home-title {
           font-size: 2.5rem;
@@ -211,18 +220,21 @@ function Home() {
         }
       `}</style>
 
-      {/* Hero Banner with Parallax */}
+      {/* Hero Banner with Parallax & Image */}
       <section className="home-hero parallax-bg">
-        <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
-          <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#E67E22' }} /> <br />
-          Capital Business Group
-        </motion.h1>
-        <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>
-          Your trusted partner for vehicle repairs, parts, and online ordering.
-        </motion.p>
-        <div className="home-cta-group">
-          <Link to="/contact" className="btn btn-primary"><FaTools style={{ marginRight: 8 }} /> Book a Service</Link>
-          <Link to="/shop" className="btn btn-secondary"><FaBoxes style={{ marginRight: 8 }} /> Order Parts</Link>
+        <img src={heroImg} alt="Professional" className="home-hero-img" />
+        <div>
+          <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
+            <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#1976D2' }} /> <br />
+            Capital Business Group
+          </motion.h1>
+          <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>
+            Your trusted partner for vehicle repairs, parts, and online ordering.
+          </motion.p>
+          <div className="home-cta-group">
+            <Link to="/contact" className="btn btn-primary"><FaTools style={{ marginRight: 8 }} /> Book a Service</Link>
+            <Link to="/shop" className="btn btn-secondary"><FaBoxes style={{ marginRight: 8 }} /> Order Parts</Link>
+          </div>
         </div>
       </section>
 
