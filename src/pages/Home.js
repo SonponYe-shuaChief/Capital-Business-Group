@@ -39,46 +39,42 @@ function Home() {
         }
         .home-hero {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          text-align: left;
-          padding: 64px 16px;
+          text-align: center;
+          padding: 32px 8px;
           background: linear-gradient(rgba(25,118,210,0.85), rgba(230,126,34,0.85)), url(${heroImg}) center/cover no-repeat;
           color: #fff;
           background-attachment: fixed;
           background-position: center;
-          gap: 48px;
+          gap: 24px;
         }
         .home-hero-img {
-          width: 340px;
-          height: 340px;
+          width: 180px;
+          height: 180px;
           object-fit: cover;
-          border-radius: 24px;
-          box-shadow: 0 8px 32px rgba(25,118,210,0.18);
-        }
-        .home-title {
-          font-size: 2.5rem;
-          font-weight: bold;
+          border-radius: 18px;
+          box-shadow: 0 4px 16px rgba(25,118,210,0.18);
           margin-bottom: 16px;
         }
+        .home-title {
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
         .home-subtext {
-          font-size: 1.25rem;
-          margin-bottom: 24px;
+          font-size: 1rem;
+          margin-bottom: 18px;
         }
         .home-cta-group {
           display: flex;
           flex-direction: column;
-          gap: 16px;
+          gap: 12px;
           align-items: center;
         }
-        @media (min-width: 768px) {
-          .home-cta-group {
-            flex-direction: row;
-          }
-        }
         .btn {
-          padding: 12px 32px;
+          padding: 10px 20px;
           border-radius: 6px;
           font-weight: 600;
           font-size: 1rem;
@@ -86,6 +82,8 @@ function Home() {
           border: none;
           cursor: pointer;
           transition: background 0.2s, color 0.2s;
+          width: 90vw;
+          max-width: 320px;
         }
         .btn-primary {
           background: #E67E22;
@@ -104,31 +102,26 @@ function Home() {
           color: #fff;
         }
         .section-title {
-          font-size: 2rem;
+          font-size: 1.5rem;
           font-weight: bold;
-          margin-bottom: 24px;
+          margin-bottom: 18px;
           text-align: center;
         }
         .mission-values {
           display: flex;
           flex-direction: column;
-          gap: 24px;
+          gap: 16px;
           align-items: center;
-        }
-        @media (min-width: 768px) {
-          .mission-values {
-            flex-direction: row;
-            justify-content: center;
-          }
         }
         .mission-card {
           background: #636E72;
           color: #fff;
           border-radius: 12px;
-          padding: 32px 24px;
+          padding: 20px 12px;
           box-shadow: 0 2px 8px rgba(99,110,114,0.08);
-          width: 100%;
+          width: 90vw;
           max-width: 320px;
+          font-size: 0.95rem;
         }
         .parallax-card {
           transition: transform 0.4s cubic-bezier(.23,1,.32,1);
@@ -143,79 +136,136 @@ function Home() {
           box-shadow: 0 8px 24px rgba(10,61,98,0.18);
         }
         .home-mission {
-          margin-top: 48px;
+          margin-top: 32px;
         }
         .home-services {
-          margin-top: 48px;
+          margin-top: 32px;
         }
         .services-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          align-items: center;
-        }
-        @media (min-width: 768px) {
-          .services-grid {
-            flex-direction: row;
-            justify-content: center;
-          }
-        }
-        .service-card {
-          background: #fff;
-          border: 2px solid #636E72;
-          border-radius: 12px;
-          padding: 32px 24px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
-          width: 100%;
-          max-width: 320px;
-        }
-        .home-why {
-          background: #f8f9fa;
-          padding: 48px 16px;
-        }
-        .why-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          align-items: center;
-        }
-        @media (min-width: 768px) {
-          .why-grid {
-            flex-direction: row;
-            justify-content: center;
-          }
-        }
-        .why-card {
-          background: #fff;
-          border: 2px solid #E67E22;
-          border-radius: 12px;
-          padding: 32px 24px;
-          box-shadow: 0 2px 8px rgba(230,126,34,0.08);
-          width: 100%;
-          max-width: 320px;
-          color: #E67E22;
-        }
-        .home-footer-cta {
-          background: #0A3D62;
-          color: #fff;
-          text-align: center;
-          padding: 32px 16px;
-        }
-        .footer-cta-title {
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-bottom: 16px;
-        }
-        .footer-cta-group {
           display: flex;
           flex-direction: column;
           gap: 16px;
           align-items: center;
         }
+        .service-card {
+          background: #fff;
+          border: 2px solid #636E72;
+          border-radius: 12px;
+          padding: 20px 12px;
+          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
+          width: 90vw;
+          max-width: 320px;
+          font-size: 0.95rem;
+        }
+        .home-why {
+          background: #f8f9fa;
+          padding: 32px 8px;
+        }
+        .why-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+        }
+        .why-card {
+          background: #fff;
+          border: 2px solid #E67E22;
+          border-radius: 12px;
+          padding: 20px 12px;
+          box-shadow: 0 2px 8px rgba(230,126,34,0.08);
+          width: 90vw;
+          max-width: 320px;
+          color: #E67E22;
+          font-size: 0.95rem;
+        }
+        .home-footer-cta {
+          background: #0A3D62;
+          color: #fff;
+          text-align: center;
+          padding: 24px 8px;
+        }
+        .footer-cta-title {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 12px;
+        }
+        .footer-cta-group {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          align-items: center;
+        }
+        /* Mobile specific tweaks */
+        @media (min-width: 480px) {
+          .home-hero-img {
+            width: 240px;
+            height: 240px;
+          }
+          .home-title {
+            font-size: 2.2rem;
+          }
+          .section-title {
+            font-size: 1.7rem;
+          }
+        }
         @media (min-width: 768px) {
-          .footer-cta-group {
+          .home-hero {
+            flex-direction: row;
+            text-align: left;
+            padding: 64px 16px;
+            gap: 48px;
+          }
+          .home-hero-img {
+            width: 340px;
+            height: 340px;
+            margin-bottom: 0;
+          }
+          .home-title {
+            font-size: 2.5rem;
+          }
+          .home-subtext {
+            font-size: 1.25rem;
+          }
+          .home-cta-group {
+            flex-direction: row;
+            gap: 16px;
+          }
+          .mission-values {
             flex-direction: row;
             justify-content: center;
+            gap: 24px;
+          }
+          .services-grid {
+            flex-direction: row;
+            justify-content: center;
+            gap: 24px;
+          }
+          .why-grid {
+            flex-direction: row;
+            justify-content: center;
+            gap: 24px;
+          }
+          .mission-card, .service-card, .why-card {
+            width: 100%;
+            max-width: 320px;
+            font-size: 1rem;
+            padding: 32px 24px;
+          }
+          .home-mission, .home-services {
+            margin-top: 48px;
+          }
+          .home-why {
+            padding: 48px 16px;
+          }
+          .home-footer-cta {
+            padding: 32px 16px;
+          }
+          .footer-cta-title {
+            font-size: 1.5rem;
+          }
+          .footer-cta-group {
+            flex-direction: row;
+            gap: 16px;
           }
         }
       `}</style>

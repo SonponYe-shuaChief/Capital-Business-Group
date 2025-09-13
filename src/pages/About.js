@@ -13,7 +13,7 @@ const cardVariants = {
 function About() {
   return (
     <div className="about-bg">
-      <style>{`
+  <style>{`
         .about-bg {
           background: #f7fafc;
           padding: 48px 16px;
@@ -95,6 +95,38 @@ function About() {
         }
         .about-card-content p {
           font-size: 1.25rem;
+        }
+        @media (max-width: 900px) {
+          .about-bg {
+            padding: 24px 4px;
+          }
+          .about-title {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+          }
+          .about-intro {
+            font-size: 1rem;
+            padding: 0 4px;
+          }
+          .about-highlights {
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+          }
+          .about-card {
+            max-width: 98vw;
+            min-height: 180px;
+            padding: 8px 2px;
+          }
+          .about-card-content {
+            padding: 24px 8px;
+          }
+          .about-card-content h3 {
+            font-size: 1.1rem;
+          }
+          .about-card-content p {
+            font-size: 0.95rem;
+          }
         }
       `}</style>
       <h1 className="about-title">About Us</h1>
