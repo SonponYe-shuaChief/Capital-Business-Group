@@ -182,7 +182,7 @@ function Home() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 20px;
+          gap: 4px;
           margin: 0 auto;
         }
 
@@ -192,7 +192,7 @@ function Home() {
             flex-direction: row;
             text-align: left;
             padding: 64px 16px;
-            gap: 48px;
+            gap: 5px;
           }
           .home-hero-img {
             width: 340px;
@@ -213,7 +213,11 @@ function Home() {
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 24px;
+            gap: 100px;
+          }
+          .card-bg {
+            margin-left: -2px;
+            margin-right: -2px;
           }
         }
 
