@@ -3,6 +3,15 @@ import { FaCarSide, FaTools, FaUserShield, FaShippingFast, FaHandshake, FaRegClo
 import heroImg from '../assets/images/1.jpeg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import reliabilityImg from '../assets/images/reliabilty.jpeg';
+import convenienceImg from '../assets/images/online expert.jpeg';
+import customerImg from '../assets/images/customer service.jpeg';
+import repairsImg from '../assets/images/technicians.jpeg';
+import partsImg from '../assets/images/parts.jpeg';
+import orderingImg from '../assets/images/oil change.jpeg';
+import trustImg from '../assets/images/experience.jpeg';
+import transparencyImg from '../assets/images/tools.jpeg';
+import quickImg from '../assets/images/quick turnaround.jpeg';
 
 const heroVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -141,6 +150,33 @@ function Home() {
           color: #555;
         }
 
+        /* Card background and overlay */
+        .card-bg {
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          border-radius: 12px;
+          overflow: hidden;
+          min-height: 220px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 340px;
+          max-width: 90vw;
+          margin: 0 auto;
+        }
+        .card-overlay {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(20, 30, 40, 0.38);
+          z-index: 1;
+        }
+        .card-content {
+          position: relative;
+          z-index: 2;
+          color: #fff;
+        }
+
         /* Grid Layouts */
         .mission-values, .services-grid, .why-grid {
           display: flex;
@@ -227,21 +263,30 @@ function Home() {
       {/* Mission Statement */}
       <section className="home-mission">
         <h2 className="section-title">Our Mission</h2>
-        <div className="mission-values">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
-            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#1976D2' }} />
-            <h3>Reliability</h3>
-            <p>Consistent, dependable service for every customer.</p>
+    <div className="mission-values">
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+              <h3>Reliability</h3>
+              <p>Consistent, dependable service for every customer.</p>
+            </div>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
-            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-            <h3>Convenience</h3>
-            <p>Easy booking, online ordering, and fast delivery.</p>
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+              <h3>Convenience</h3>
+              <p>Easy booking, online ordering, and fast delivery.</p>
+            </div>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
-            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
-            <h3>Customer-first</h3>
-            <p>Your satisfaction is our top priority.</p>
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="mission-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+              <h3>Customer-first</h3>
+              <p>Your satisfaction is our top priority.</p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -250,20 +295,29 @@ function Home() {
       <section className="home-services">
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
-            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#1976D2' }} />
-            <h3>Repairs</h3>
-            <p>Expert maintenance and repair for all vehicle types.</p>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+              <h3>Repairs</h3>
+              <p>Expert maintenance and repair for all vehicle types.</p>
+            </div>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
-            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-            <h3>Parts</h3>
-            <p>OEM and aftermarket parts for every need.</p>
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+              <h3>Parts</h3>
+              <p>OEM and aftermarket parts for every need.</p>
+            </div>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card parallax-card">
-            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
-            <h3>Online Ordering</h3>
-            <p>Order parts and accessories online, delivered nationwide.</p>
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="service-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+              <h3>Online Ordering</h3>
+              <p>Order parts and accessories online, delivered nationwide.</p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -272,20 +326,29 @@ function Home() {
       <section className="home-why">
         <h2 className="section-title">Why Choose Us</h2>
         <div className="why-grid">
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card">
-            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#1976D2' }} />
-            <h3>Trust</h3>
-            <p>Proven track record and trusted by thousands.</p>
+          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+              <h3>Trust</h3>
+              <p>Proven track record and trusted by thousands.</p>
+            </div>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card">
-            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
-            <h3>Transparency</h3>
-            <p>Clear pricing and honest service.</p>
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+              <h3>Transparency</h3>
+              <p>Clear pricing and honest service.</p>
+            </div>
           </motion.div>
-          <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="info-card">
-            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
-            <h3>Quick Turnaround</h3>
-            <p>Fast service to get you back on the road.</p>
+            <motion.div initial="hidden" whileInView="visible" variants={cardVariants} viewport={{ once: true }} className="why-card card-bg" style={{backgroundImage: `url(${heroImg})`}}>
+            <div className="card-overlay"></div>
+            <div className="card-content">
+              <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+              <h3>Quick Turnaround</h3>
+              <p>Fast service to get you back on the road.</p>
+            </div>
           </motion.div>
         </div>
       </section>
