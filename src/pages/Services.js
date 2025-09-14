@@ -1,8 +1,8 @@
 import React from 'react';
-import partsImg from '../assets/images/parts.jpeg';
-import maintenanceImg from '../assets/images/oil-change.jpeg';
-import onlineImg from '../assets/images/online-expert.jpeg';
-import bgImg from '../assets/images/1.jpeg';
+const partsImg = '/images/parts.jpeg';
+const maintenanceImg = '/images/oil-change.jpeg';
+const onlineImg = '/images/online-expert.jpeg';
+const bgImg = '/images/1.jpeg';
 import { motion } from 'framer-motion';
 import { MdLocalGasStation, MdAssignment, MdSearch, MdBuild, MdSettingsInputComponent, MdRadioButtonChecked, MdAcUnit, MdSettings, MdElectricalServices, MdLabel, MdBatteryFull, MdCardGiftcard, MdLocalShipping, MdHandshake, MdShoppingCart } from 'react-icons/md';
 

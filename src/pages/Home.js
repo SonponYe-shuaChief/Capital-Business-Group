@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import teamImg from '../assets/images/technicians.jpeg';
-import shopImg from '../assets/images/parts.jpeg';
-import logo from '../assets/images/logo.png';
 import { FaCarSide, FaTools, FaUserShield, FaShippingFast, FaHandshake, FaRegClock, FaCogs, FaBoxes } from 'react-icons/fa';
-import heroImg from '../assets/images/1.jpeg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const carouselImages = [
-  require('../assets/images/quick-turnaround.jpeg'),
-  require('../assets/images/customer-service.jpeg'),
-  require('../assets/images/online-expert.jpeg'),
+  '/images/quick-turnaround.jpeg',
+  '/images/customer-service.jpeg',
+  '/images/online-expert.jpeg',
 ];
 
 function ImageCarousel() {
@@ -96,7 +92,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="home-bg">
+  <div className="home-bg">
       <style>{`
         .home-bg {
           background: #f7fafc;
@@ -111,7 +107,7 @@ function Home() {
           justify-content: center;
           text-align: center;
           padding: 52px 28px;
-          background: linear-gradient(rgba(25,118,210,0.85), rgba(241, 217, 79, 0.55)), url(${heroImg}) center/cover no-repeat;
+          background: linear-gradient(rgba(25,118,210,0.85), rgba(241, 217, 79, 0.55)), url('/images/1.jpeg') center/cover no-repeat;
           color: #fff;
           background-attachment: fixed;
           background-position: center;
@@ -266,7 +262,7 @@ function Home() {
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={logo} alt="Logo" style={{ height: '160px', width: '160px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
+              <img src={'/images/logo.png'} alt="Logo" style={{ height: '160px', width: '160px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
               <span style={{ color: '#fff' }}>Capital Business Group</span>
             </div>
           </motion.h1>
@@ -281,7 +277,7 @@ function Home() {
       </section>
       {/* Professional Team Image After Hero */}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '40px 0' }}>
-        <img src={teamImg} alt="Our Team" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(25,118,210,0.13)', opacity: 0.93 }} />
+  <img src={'/images/technicians.jpeg'} alt="Our Team" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(25,118,210,0.13)', opacity: 0.93 }} />
       </div>
       
 
@@ -354,7 +350,7 @@ function Home() {
 
       {/* Shop Image Before Footer CTA */}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '40px 0' }}>
-        <img src={shopImg} alt="Shop Parts" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(230,126,34,0.13)', opacity: 0.93 }} />
+  <img src={'/images/parts.jpeg'} alt="Shop Parts" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(230,126,34,0.13)', opacity: 0.93 }} />
       </div>
       {/* Footer CTA */}
       <section className="home-footer-cta">

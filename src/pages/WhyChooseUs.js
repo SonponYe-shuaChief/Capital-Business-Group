@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import bgImg from '../assets/images/1.jpeg';
-import expImg from '../assets/images/experience.jpeg';
-import techImg from '../assets/images/technicians.jpeg';
-import supplierImg from '../assets/images/1.jpeg';
-import onlineImg from '../assets/images/online-expert.jpeg';
+const bgImg = '/images/1.jpeg';
+const expImg = '/images/experience.jpeg';
+const techImg = '/images/technicians.jpeg';
+const supplierImg = '/images/1.jpeg';
+const onlineImg = '/images/online-expert.jpeg';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
