@@ -1,3 +1,5 @@
+        /* moved to CSS block below */
+// ...existing imports and code...
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const bgImg = '/images/1.jpeg';
@@ -38,6 +40,21 @@ function WhyChooseUs() {
   return (
     <div className="why-bg" ref={bgRef}>
       <style>{`
+        @media (min-width: 900px) {
+          .why-testimonials .testimonial-row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 32px;
+            justify-content: center;
+            align-items: stretch;
+          }
+        }
+        @media (min-width: 900px) {
+          .testimonial-text {
+            font-size: 1.5rem !important;
+          }
+        }
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
         .why-bg {
           font-family: 'Oswald', Arial, sans-serif;
@@ -149,8 +166,8 @@ function WhyChooseUs() {
       {/* Testimonials Section */}
       <section className="why-testimonials" style={{ background: '#fff', padding: '48px 0', marginTop: '48px' }}>
         <style>{`.testimonial-text { color: #1976D2 !important; }`}</style>
-        <h2 className="section-title" style={{ color: '#1976D2', textAlign: 'center' }}>What Our Clients Say</h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+        <h2 className="testimonial-text" style={{ color: '#1976D2', textAlign: 'center' }}>What Our Clients Say</h2>
+  <div className="testimonial-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center', maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: '18px', padding: '32px 24px', maxWidth: '400px', minWidth: '260px', boxShadow: '0 4px 16px rgba(25,118,210,0.12)', textAlign: 'center' }}>
             <p className="testimonial-text" style={{ fontStyle: 'italic', marginBottom: '18px', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>
               “Excellent from start to finish and easy to deal with. Couldn’t recommend enough.”
