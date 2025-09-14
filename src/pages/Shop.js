@@ -109,7 +109,7 @@ function Shop() {
           align-items: center;
           justify-content: center;
           font-size: 4rem;
-          color: #E67E22;
+          color: #0f161fff;
           transition: transform 0.2s;
         }
         .shop-card-title {
@@ -125,7 +125,7 @@ function Shop() {
           font-size: 1.1rem;
         }
         .btn.btn-primary {
-          background: #E67E22;
+          background: #182b50ff;
           color: #fff;
           font-size: 1.05rem;
           padding: 12px 32px;

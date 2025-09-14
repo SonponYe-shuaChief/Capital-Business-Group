@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 .navbar-link {
-	color: #1976D2;
+	color: #5e6b79;
 	font-weight: 600;
 	text-decoration: none;
 	transition: color 0.2s, background 0.2s;
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-link:hover,
 .navbar-link.active {
 	color: #fff;
-	background: #1976D2;
+	background: #66a6e6;
 }
 
 /* Hamburger styles */
@@ -154,8 +154,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
-	background: linear-gradient(90deg, #1976D2 60%, #E67E22 100%);
-	color: #fff;
+	background: linear-gradient(90deg, #0f355a 60%, #0a023a 100%);
+	color: #ffffff;
 	padding: 32px 0 24px 0;
 	margin-top: 32px;
 }
