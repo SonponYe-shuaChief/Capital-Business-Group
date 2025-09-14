@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import logo from '../assets/images/logo.png';
 import { FaCarSide, FaTools, FaUserShield, FaShippingFast, FaHandshake, FaRegClock, FaCogs, FaBoxes } from 'react-icons/fa';
 import heroImg from '../assets/images/1.jpeg';
 import { motion } from 'framer-motion';
@@ -262,8 +263,10 @@ function Home() {
       <section className="home-hero parallax-bg">
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
-            <FaCarSide style={{ fontSize: '2.5rem', marginBottom: '12px', color: '#ffffffff' }} /> <br />
-            <span style={{ color: '#fff' }}>Capital Business Group</span>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+              <img src={logo} alt="Logo" style={{ height: '160px', width: '160px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
+              <span style={{ color: '#fff' }}>Capital Business Group</span>
+            </div>
           </motion.h1>
           <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>
             Your trusted partner for vehicle repairs, parts, and online ordering.
@@ -275,7 +278,7 @@ function Home() {
         </div>
       </section>
       {/* Carousel Section After Hero */}
-      <ImageCarousel />
+      
 
       {/* Mission Statement */}
       <section className="home-mission">
