@@ -57,7 +57,7 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img src={logo} alt="Logo" style={{ height: '72px', width: '72px', objectFit: 'contain', borderRadius: '15px', boxShadow: '0 2px 12px rgba(0,0,0,0.12)' }} />
-          <span style={{ fontWeight: 'bold', fontSize: '1.15rem', color: '#0A3D62' }}>Capital Business Group</span>
+          <span style={{ fontWeight: 'bold', fontSize: '1.05rem', color: '#0A3D62' }}>Driving Trust.. Delivering Solutions</span>
         </Link>
         {/* Hamburger for mobile */}
         <button

@@ -185,6 +185,7 @@ function Home() {
           font-weight: bold;
           margin-bottom: 38px;
           text-align: center;
+          color:#03071fff;
         }
 
         /* Unified Card Style */
@@ -197,7 +198,7 @@ function Home() {
           max-width: 400px;
           font-size: 1.15rem;
           text-align: center;
-          color: #1976D2;
+          color: #09243fff;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
           @media (max-width: 600px) {
@@ -223,12 +224,12 @@ function Home() {
         .info-card h3, .mission-card h3, .service-card h3, .why-card h3 {
           font-size: 1.4rem;
           margin-bottom: 28px;
-          color: #1976D2;
+          color: #0c2946ff;
           text-align: center;
         }
         .info-card p, .mission-card p, .service-card p, .why-card p {
           font-size: 1.15rem;
-          color: #1976D2;
+          color: #0f2a46ff;
           text-align: center;
         }
 
@@ -267,7 +268,7 @@ function Home() {
 
         /* Footer CTA */
         .home-footer-cta {
-          background: #0A3D62;
+          background: #03071fff;
           color: #fff;
           text-align: center;
           padding: 52px 36px;
@@ -322,17 +323,17 @@ function Home() {
         <h2 className="section-title">Our Mission</h2>
         <div className="mission-values">
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="mission-card">
-            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Reliability</h3>
             <p>Consistent, dependable service for every customer.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="mission-card">
-            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Convenience</h3>
             <p>Easy booking, online ordering, and fast delivery.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="mission-card">
-            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Customer-first</h3>
             <p>Your satisfaction is our top priority.</p>
           </motion.div>
@@ -344,17 +345,17 @@ function Home() {
         <h2 className="section-title">Our Services</h2>
         <div className="services-grid">
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="service-card">
-            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+            <FaCogs style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Repairs</h3>
             <p>Expert maintenance and repair for all vehicle types.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="service-card">
-            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+            <FaBoxes style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Parts</h3>
             <p>OEM and aftermarket parts for every need.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="service-card">
-            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#0A3D62' }} />
+            <FaShippingFast style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Online Ordering</h3>
             <p>Order parts and accessories online, delivered nationwide.</p>
           </motion.div>
@@ -366,17 +367,17 @@ function Home() {
         <h2 className="section-title">Why Choose Us</h2>
         <div className="why-grid">
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="why-card">
-            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <FaUserShield style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Trust</h3>
             <p>Proven track record and trusted by thousands.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="why-card">
-            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <FaHandshake style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Transparency</h3>
             <p>Clear pricing and honest service.</p>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" variants={cardVariants} className="why-card">
-            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#E67E22' }} />
+            <FaRegClock style={{ fontSize: '2rem', marginBottom: '8px', color: '#03071fff' }} />
             <h3>Quick Turnaround</h3>
             <p>Fast service to get you back on the road.</p>
           </motion.div>
