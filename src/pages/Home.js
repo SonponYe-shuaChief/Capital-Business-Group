@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import teamImg from '../assets/images/technicians.jpeg';
+import shopImg from '../assets/images/parts.jpeg';
 import logo from '../assets/images/logo.png';
 import { FaCarSide, FaTools, FaUserShield, FaShippingFast, FaHandshake, FaRegClock, FaCogs, FaBoxes } from 'react-icons/fa';
 import heroImg from '../assets/images/1.jpeg';
@@ -278,7 +280,10 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* Carousel Section After Hero */}
+      {/* Professional Team Image After Hero */}
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '40px 0' }}>
+        <img src={teamImg} alt="Our Team" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(25,118,210,0.13)', opacity: 0.93 }} />
+      </div>
       
 
       {/* Mission Statement */}
@@ -348,6 +353,10 @@ function Home() {
       </section>
 
 
+      {/* Shop Image Before Footer CTA */}
+      <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '40px 0' }}>
+        <img src={shopImg} alt="Shop Parts" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(230,126,34,0.13)', opacity: 0.93 }} />
+      </div>
       {/* Footer CTA */}
       <section className="home-footer-cta">
         <h2 className="footer-cta-title">Ready to get started?</h2>

@@ -20,25 +20,24 @@ function About() {
           font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
         }
         .about-title {
-          font-size: 3rem;
+          font-size: 3.2rem;
           font-weight: bold;
           color: #0A3D62;
-          margin-bottom: 32px;
+          margin-bottom: 40px;
           text-align: center;
+          letter-spacing: 1px;
         }
         .about-intro {
-          max-width: 1200px;
-          margin: 0 auto 40px auto;
-          font-size: 1.5rem;
-          line-height: 1.7;
+          max-width: 900px;
+          margin: 0 auto 48px auto;
+          font-size: 1.45rem;
+          line-height: 1.85;
+          color: #1a2636;
+          background: #f3f6fa;
+          border-radius: 18px;
+          padding: 32px 28px;
+          box-shadow: 0 4px 24px rgba(25,118,210,0.08);
         }
-          .about-intro {
-            max-width: 700px;
-            margin: 0 auto 40px auto;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: #222e3a;
-          }
         .about-highlights {
           display: flex;
           flex-direction: column;
@@ -132,25 +131,27 @@ function About() {
       <h1 className="about-title">About Us</h1>
       <motion.section initial="hidden" animate="visible" variants={cardVariants} className="about-intro">
         <div className="about-intro">
-          <strong>At Capital Business Group we are passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</strong> With years of experience in the automotive sector, we provide a comprehensive range of services — from vehicle repairs and maintenance, to retailing high-quality parts and accessories, to convenient online ordering and delivery.<br /><br />
-          <strong>Our mission is simple:</strong><br />
-          <ul style={{ margin: '16px 0 24px 24px', fontSize: '1.1rem', color: '#0A3D62' }}>
+          <span style={{ fontSize: '1.7rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', marginBottom: '18px' }}>Welcome to Capital Business Group</span>
+          <span style={{ fontSize: '1.25rem', fontWeight: '500', color: '#E67E22', display: 'block', marginBottom: '18px' }}>Passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</span>
+          <span style={{ display: 'block', marginBottom: '18px' }}>With years of experience in the automotive sector, we provide a comprehensive range of services — from vehicle repairs and maintenance, to retailing high-quality parts and accessories, to convenient online ordering and delivery.</span>
+          <span style={{ fontSize: '1.35rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', margin: '32px 0 12px 0' }}>Our Mission</span>
+          <ul style={{ margin: '0 0 24px 24px', fontSize: '1.18rem', color: '#1976D2', lineHeight: '2.1' }}>
             <li><strong>Reliability:</strong> Deliver top-quality work and products you can trust.</li>
             <li><strong>Convenience:</strong> Make car care easy with both in-person and online solutions.</li>
             <li><strong>Customer-first service:</strong> Put you back on the road quickly and confidently.</li>
           </ul>
-          Whether you’re a car owner, a fleet manager, or a DIY enthusiast, we have the skills, parts, and digital solutions to keep your vehicle running smoothly.<br /><br />
-          <strong>Our Experience</strong><br />
-          At Capital Business Group, experience isn’t just about the number of years we’ve been in business — it’s about the knowledge, skill, and trust we’ve built with every customer we’ve served.<br /><br />
-          With close to a decade of experience in the automotive industry, we’ve worked on everything from small family cars to commercial fleets. Our technicians are fully trained and stay up to date with the latest vehicle technology, ensuring we can service modern vehicles with complex electronic systems as well as older, classic models.<br /><br />
-          <strong>Our Track Record</strong>
-          <ul style={{ margin: '16px 0 24px 24px', fontSize: '1.1rem', color: '#0A3D62' }}>
+          <span style={{ display: 'block', marginBottom: '18px' }}>Whether you’re a car owner, a fleet manager, or a DIY enthusiast, we have the skills, parts, and digital solutions to keep your vehicle running smoothly.</span>
+          <span style={{ fontSize: '1.35rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', margin: '32px 0 12px 0' }}>Our Experience</span>
+          <span style={{ display: 'block', marginBottom: '18px' }}>Experience isn’t just about the number of years we’ve been in business — it’s about the knowledge, skill, and trust we’ve built with every customer we’ve served.</span>
+          <span style={{ display: 'block', marginBottom: '18px' }}>With close to a decade of experience in the automotive industry, we’ve worked on everything from small family cars to commercial fleets. Our technicians are fully trained and stay up to date with the latest vehicle technology, ensuring we can service modern vehicles with complex electronic systems as well as older, classic models.</span>
+          <span style={{ fontSize: '1.35rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', margin: '32px 0 12px 0' }}>Our Track Record</span>
+          <ul style={{ margin: '0 0 24px 24px', fontSize: '1.18rem', color: '#1976D2', lineHeight: '2.1' }}>
             <li>Thousands of vehicles serviced — from routine MOTs to major repairs</li>
             <li>Long-standing supplier relationships — allowing us to source genuine and aftermarket parts quickly and at competitive prices</li>
             <li>Trusted by individuals and businesses — including fleet operators, car enthusiasts, and garages across the UK</li>
             <li>Proven online expertise — delivering parts and accessories nationwide through our service</li>
           </ul>
-          We believe our experience shows in everything we do: clear communication, attention to detail, and work that stands the test of time.
+          <span style={{ display: 'block', marginBottom: '18px' }}>We believe our experience shows in everything we do: clear communication, attention to detail, and work that stands the test of time.</span>
         </div>
       </motion.section>
       <section className="about-highlights">
