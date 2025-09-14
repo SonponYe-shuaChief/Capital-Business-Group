@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   height: 4px;
   width: 100%;
-  background: #E67E22;
+  background: #03071fff;
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 18px;
 }
 .navbar-link.mobile {
-  color: #1976D2;
+  color: #03071fff;
   font-family: 'Poppins', 'Inter', 'Open Sans', 'Segoe UI', 'Arial', sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 .navbar-link.mobile.active {
-  background: #1976D2;
+  background: #03071fff;
   color: #fff;
 }
 .navbar-link.mobile:hover {
