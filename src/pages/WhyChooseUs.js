@@ -72,9 +72,9 @@ function WhyChooseUs() {
             font-size: 1.5rem !important;
           }
         }
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
         .why-bg {
-          font-family: 'Oswald', Arial, sans-serif;
+          font-family: 'Roboto Condensed', Arial, sans-serif;
           position: relative;
           background: url(${bgImg}) center/cover no-repeat;
           min-height: 100vh;
