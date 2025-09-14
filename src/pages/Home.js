@@ -109,23 +109,23 @@ function Home() {
           align-items: center;
           justify-content: center;
           text-align: center;
-          padding: 32px 8px;
+          padding: 52px 28px;
           background: linear-gradient(rgba(25,118,210,0.85), rgba(241, 217, 79, 0.55)), url(${heroImg}) center/cover no-repeat;
           color: #fff;
           background-attachment: fixed;
           background-position: center;
-          gap: 24px;
+          gap: 44px;
         }
 
         .home-title {
-          font-size: 2rem;
+          font-size: 2.25rem;
           font-weight: bold;
-          margin-bottom: 12px;
+          margin-bottom: 32px;
         }
 
         .home-subtext {
-          font-size: 1rem;
-          margin-bottom: 18px;
+          font-size: 1.25rem;
+          margin-bottom: 38px;
         }
 
         .home-cta-group {
@@ -136,16 +136,16 @@ function Home() {
         }
 
         .btn {
-          padding: 30px 20px;
+          padding: 38px 40px;
           border-radius: 6px;
           font-weight: 600;
-          font-size: 1rem;
+          font-size: 1.25rem;
           text-decoration: none;
           border: none;
           cursor: pointer;
           transition: background 0.2s, color 0.2s, transform 0.2s;
           width: 90vw;
-          max-width: 320px;
+          max-width: 340px;
         }
         .btn:hover {
           transform: translateY(-2px);
@@ -169,21 +169,21 @@ function Home() {
 
         /* Section Titles */
         .section-title {
-          font-size: 1.5rem;
+          font-size: 1.75rem;
           font-weight: bold;
-          margin-bottom: 18px;
+          margin-bottom: 38px;
           text-align: center;
         }
 
         /* Unified Card Style */
         .info-card, .mission-card, .service-card, .why-card {
           background: #fff;
-          border-radius: 12px;
-          padding: 24px 16px;
+          border-radius: 20px;
+          padding: 44px 36px;
           box-shadow: 0 4px 10px rgba(0,0,0,0.06);
           width: 85vw;
-          max-width: 380px;
-          font-size: 0.95rem;
+          max-width: 400px;
+          font-size: 1.15rem;
           text-align: center;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -192,11 +192,11 @@ function Home() {
           box-shadow: 0 6px 16px rgba(0,0,0,0.1);
         }
         .info-card h3, .mission-card h3, .service-card h3, .why-card h3 {
-          font-size: 1.2rem;
-          margin-bottom: 8px;
+          font-size: 1.4rem;
+          margin-bottom: 28px;
         }
         .info-card p, .mission-card p, .service-card p, .why-card p {
-          font-size: 0.95rem;
+          font-size: 1.15rem;
           color: #555;
         }
 
@@ -205,7 +205,7 @@ function Home() {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 16px;
+          gap: 36px;
           margin: 0 auto;
         }
 
@@ -238,12 +238,12 @@ function Home() {
           background: #0A3D62;
           color: #fff;
           text-align: center;
-          padding: 32px 16px;
+          padding: 52px 36px;
         }
         .footer-cta-title {
-          font-size: 1.5rem;
+          font-size: 1.7rem;
           font-weight: bold;
-          margin-bottom: 12px;
+          margin-bottom: 32px;
         }
         .footer-cta-group {
           display: flex;

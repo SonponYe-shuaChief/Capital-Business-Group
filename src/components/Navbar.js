@@ -78,6 +78,7 @@ function Navbar() {
               <Link
                 to={link.path}
                 className={`navbar-link${activeTab === link.path ? ' active tab-animate' : ''}`}
+                style={{ padding: '10px 28px', fontSize: '1.28rem', minHeight: '54px', display: 'flex', alignItems: 'center' }}
               >
                 {link.name}
               </Link>
