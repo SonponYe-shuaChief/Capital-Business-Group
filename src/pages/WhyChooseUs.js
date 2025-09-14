@@ -38,7 +38,9 @@ function WhyChooseUs() {
   return (
     <div className="why-bg" ref={bgRef}>
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
         .why-bg {
+          font-family: 'Oswald', Arial, sans-serif;
           position: relative;
           background: url(${bgImg}) center/cover no-repeat;
           min-height: 100vh;
@@ -59,13 +61,16 @@ function WhyChooseUs() {
           z-index: 2;
         }
         .why-title {
-          font-size: 2.5rem;
-          font-weight: bold;
-          color: #fff;
-          margin-bottom: 40px;
-          text-align: center;
-          letter-spacing: 1px;
-          text-shadow: 0 2px 8px rgba(10,61,98,0.18);
+         font-size: 2.5rem;
+         font-weight: bold;
+         color: #fff;
+         margin-bottom: 40px;
+         text-align: center;
+         letter-spacing: 1px;
+         text-shadow: 0 2px 8px rgba(10,61,98,0.18);
+        }
+        .why-bg, .why-bg *, .why-card-content h3, .why-card-content p {
+         color: #fff !important;
         }
         .why-grid {
           display: flex;

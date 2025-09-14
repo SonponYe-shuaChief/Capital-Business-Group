@@ -123,6 +123,7 @@ function Home() {
         .home-subtext {
           font-size: 1.25rem;
           margin-bottom: 38px;
+          text-align: center;
         }
 
         .home-cta-group {
