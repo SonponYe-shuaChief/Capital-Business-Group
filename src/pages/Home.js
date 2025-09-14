@@ -136,7 +136,7 @@ function Home() {
         }
 
         .btn {
-          padding: 10px 20px;
+          padding: 30px 20px;
           border-radius: 6px;
           font-weight: 600;
           font-size: 1rem;
@@ -250,6 +250,7 @@ function Home() {
           flex-direction: column;
           gap: 12px;
           align-items: center;
+          justify-content: center;
         }
         @media (min-width: 768px) {
           .footer-cta-group {
