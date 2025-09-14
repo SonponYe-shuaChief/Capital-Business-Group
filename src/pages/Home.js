@@ -145,6 +145,19 @@ function Home() {
           width: 90vw;
           max-width: 340px;
         }
+          @media (max-width: 600px) {
+            .btn {
+              padding: 16px 8px;
+              font-size: 1rem;
+              width: 70vw;
+              height: 3vh;
+              max-width: 98vw;
+              border-radius: 10px;
+            }
+            .home-cta-group {
+              gap: 8px;
+            }
+          }
         .btn:hover {
           transform: translateY(-2px);
         }
@@ -186,6 +199,22 @@ function Home() {
           text-align: center;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+          @media (max-width: 600px) {
+            .info-card, .mission-card, .service-card, .why-card {
+              padding: 18px 8px;
+              width: 90vw;
+              max-width: 98vw;
+              font-size: 1rem;
+              border-radius: 14px;
+            }
+            .info-card h3, .mission-card h3, .service-card h3, .why-card h3 {
+              font-size: 1.1rem;
+              margin-bottom: 16px;
+            }
+            .info-card p, .mission-card p, .service-card p, .why-card p {
+              font-size: 0.95rem;
+            }
+          }
         .info-card:hover, .mission-card:hover, .service-card:hover, .why-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 6px 16px rgba(0,0,0,0.1);
