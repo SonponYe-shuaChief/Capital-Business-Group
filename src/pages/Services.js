@@ -74,7 +74,7 @@ function Services() {
         .services-section-title {
           font-size: 1.7rem;
           font-weight: bold;
-          color: #f0a86eff;
+          color: #ffffffff;
           margin-bottom: 18px;
           text-align: center;
         }

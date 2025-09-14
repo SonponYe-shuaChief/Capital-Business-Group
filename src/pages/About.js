@@ -132,7 +132,7 @@ function About() {
       <motion.section initial="hidden" animate="visible" variants={cardVariants} className="about-intro">
         <div className="about-intro">
           <span style={{ fontSize: '1.7rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', marginBottom: '18px' }}>Welcome to Capital Business Group</span>
-          <span style={{ fontSize: '1.25rem', fontWeight: '500', color: '#E67E22', display: 'block', marginBottom: '18px' }}>Passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</span>
+          <span style={{ fontSize: '1.85rem', fontWeight: '900', color: '#1a0652ff', display: 'block', marginBottom: '18px' }}>Passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</span>
           <span style={{ display: 'block', marginBottom: '18px' }}>With years of experience in the automotive sector, we provide a comprehensive range of services — from vehicle repairs and maintenance, to retailing high-quality parts and accessories, to convenient online ordering and delivery.</span>
           <span style={{ fontSize: '1.35rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', margin: '32px 0 12px 0' }}>Our Mission</span>
           <ul style={{ margin: '0 0 24px 24px', fontSize: '1.18rem', color: '#1976D2', lineHeight: '2.1' }}>
