@@ -129,6 +129,47 @@ function Services() {
           text-align: center;
           letter-spacing: 0.5px;
         }
+          @media (max-width: 768px) {
+            .services-bg {
+              padding: 24px 4px;
+            }
+            .services-title {
+              font-size: 2rem;
+              margin-bottom: 20px;
+            }
+            .services-section-title {
+              font-size: 1.2rem;
+              margin-bottom: 12px;
+            }
+            .presentable-list {
+              gap: 16px;
+            }
+            .service-item {
+              padding: 20px 8px;
+              min-width: 120px;
+              max-width: 160px;
+            }
+            .service-icon {
+              font-size: 2rem;
+              margin-bottom: 8px;
+            }
+            .service-name {
+              font-size: 1rem;
+            }
+            .services-section > div {
+              flex-direction: column !important;
+              gap: 16px !important;
+              padding: 16px 8px !important;
+            }
+            .services-section img {
+              width: 120px !important;
+              height: 120px !important;
+              border-radius: 16px !important;
+            }
+            .services-section div[style] {
+              font-size: 1rem !important;
+            }
+          }
       `}</style>
       <h1 className="services-title">Our Services</h1>
       {/* Section 1: Vehicle Maintenance & Repair */}
