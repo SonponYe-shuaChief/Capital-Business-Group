@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Services', path: '/services' },
   { name: 'Why Choose Us', path: '/why-choose-us' },
   { name: 'Contact', path: '/contact' },
-  { name: 'Shop', path: '/shop' },
+//  { name: 'Shop', path: '/shop' },
 ];
 
 function Navbar() {

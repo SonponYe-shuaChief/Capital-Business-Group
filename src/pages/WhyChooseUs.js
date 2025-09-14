@@ -1,3 +1,4 @@
+
         /* moved to CSS block below */
 // ...existing imports and code...
 import React, { useEffect, useRef } from 'react';
@@ -40,6 +41,22 @@ function WhyChooseUs() {
   return (
     <div className="why-bg" ref={bgRef}>
       <style>{`
+        @media (max-width: 600px) {
+          .testimonial-row {
+            flex-direction: column !important;
+            gap: 16px !important;
+            align-items: center !important;
+          }
+          .testimonial-row > div {
+            padding: 16px 8px !important;
+            min-width: 90vw !important;
+            max-width: 98vw !important;
+          }
+          .testimonial-text {
+            font-size: 1rem !important;
+          }
+        }
+          
         @media (min-width: 900px) {
           .why-testimonials .testimonial-row {
             display: flex;

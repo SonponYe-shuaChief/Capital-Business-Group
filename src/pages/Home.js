@@ -162,8 +162,8 @@ function Home() {
           transform: translateY(-2px);
         }
         .btn-primary {
-         background: #ece9e2ff;
-         color: #a37622ff;
+         background: #ffffffff;
+         color: #090b66ff;
         }
         .btn-primary:hover {
          background: #08034dff;
@@ -273,6 +273,7 @@ function Home() {
           padding: 52px 36px;
         }
         .footer-cta-title {
+        color:white;
           font-size: 1.7rem;
           font-weight: bold;
           margin-bottom: 32px;
@@ -304,9 +305,9 @@ function Home() {
           <motion.p className="home-subtext" initial="hidden" animate="visible" variants={heroVariants}>
             Your trusted partner for vehicle repairs, parts, and online ordering.
           </motion.p>
-          <div className="home-cta-group">
+          <div className="home-cta-group" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Link to="/contact" className="btn btn-primary"><FaTools style={{ marginRight: 8 }} /> Book a Service</Link>
-            <Link to="/shop" className="btn btn-secondary"><FaBoxes style={{ marginRight: 8 }} /> Order Parts</Link>
+            {/* <Link to="/shop" className="btn btn-secondary"><FaBoxes style={{ marginRight: 8 }} /> Order Parts</Link> */}
           </div>
         </div>
       </section>
@@ -394,7 +395,7 @@ function Home() {
         <h2 className="footer-cta-title">Ready to get started?</h2>
         <div className="footer-cta-group">
           <Link to="/contact" className="btn btn-primary">Contact Us</Link>
-          <Link to="/services" className="btn btn-secondary">Book a Service</Link>
+          {/* <Link to="/services" className="btn btn-secondary">Book a Service</Link> */}
         </div>
       </section>
     </div>
