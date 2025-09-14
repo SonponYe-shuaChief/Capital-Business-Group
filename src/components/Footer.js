@@ -6,6 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
+          <img src={'/images/cappital.jpg'} alt="Logo" style={{ height: '48px', width: '48px', objectFit: 'contain', borderRadius: '8px', marginBottom: '8px' }} />
           <span className="footer-logo">Capital Business Group</span>
           <p className="footer-copyright">&copy; {new Date().getFullYear()} All rights reserved.</p>
         </div>

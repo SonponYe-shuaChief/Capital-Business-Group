@@ -197,6 +197,7 @@ function Home() {
           max-width: 400px;
           font-size: 1.15rem;
           text-align: center;
+          color: #1976D2;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
           @media (max-width: 600px) {
@@ -222,10 +223,13 @@ function Home() {
         .info-card h3, .mission-card h3, .service-card h3, .why-card h3 {
           font-size: 1.4rem;
           margin-bottom: 28px;
+          color: #1976D2;
+          text-align: center;
         }
         .info-card p, .mission-card p, .service-card p, .why-card p {
           font-size: 1.15rem;
-          color: #555;
+          color: #1976D2;
+          text-align: center;
         }
 
         /* Grid Layouts */
@@ -293,7 +297,7 @@ function Home() {
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={'/images/logo.png'} alt="Logo" style={{ height: '160px', width: '160px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
+              <img src={'/images/capital.jpg'} alt="Logo" style={{ height: '160px', width: '160px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
               <span style={{ color: '#fff' }}>Capital Business Group</span>
             </div>
           </motion.h1>
@@ -377,6 +381,8 @@ function Home() {
           </motion.div>
         </div>
       </section>
+
+     
 
 
       {/* Shop Image Before Footer CTA */}

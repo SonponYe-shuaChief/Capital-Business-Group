@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-const logo = '/images/logo.png';
+const logo = '/images/capital.jpg';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 

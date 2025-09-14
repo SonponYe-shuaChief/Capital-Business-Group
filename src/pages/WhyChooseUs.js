@@ -145,6 +145,38 @@ function WhyChooseUs() {
           </motion.div>
         ))}
       </div>
+
+      {/* Testimonials Section */}
+      <section className="why-testimonials" style={{ background: '#fff', padding: '48px 0', marginTop: '48px' }}>
+        <style>{`.testimonial-text { color: #1976D2 !important; }`}</style>
+        <h2 className="section-title" style={{ color: '#1976D2', textAlign: 'center' }}>What Our Clients Say</h2>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ background: '#fff', borderRadius: '18px', padding: '32px 24px', maxWidth: '400px', minWidth: '260px', boxShadow: '0 4px 16px rgba(25,118,210,0.12)', textAlign: 'center' }}>
+            <p className="testimonial-text" style={{ fontStyle: 'italic', marginBottom: '18px', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>
+              “Excellent from start to finish and easy to deal with. Couldn’t recommend enough.”
+            </p>
+            <p className="testimonial-text" style={{ fontWeight: 'bold', textAlign: 'center', margin: 0 }}>- Joanne Roberts</p>
+          </div>
+          <div style={{ background: '#fff', borderRadius: '18px', padding: '32px 24px', maxWidth: '400px', minWidth: '260px', boxShadow: '0 4px 16px rgba(25,118,210,0.12)', textAlign: 'center' }}>
+            <p className="testimonial-text" style={{ fontStyle: 'italic', marginBottom: '18px', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>
+              Amazing service!! smooth transaction good customer care!!! great service. would definitely come back.”
+            </p>
+            <p className="testimonial-text" style={{ fontWeight: 'bold', textAlign: 'center', margin: 0 }}>- Jerome Thando</p>
+          </div>
+          <div style={{ background: '#fff', borderRadius: '18px', padding: '32px 24px', maxWidth: '400px', minWidth: '260px', boxShadow: '0 4px 16px rgba(25,118,210,0.12)', textAlign: 'center' }}>
+            <p className="testimonial-text" style={{ fontStyle: 'italic', marginBottom: '18px', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>
+              I had been searching for a replacement part for weeks with no luck. Capital Business Group not only found the exact part I needed but had it sourced and ready faster than I expected. They saved me so much time and frustration.”
+            </p>
+            <p className="testimonial-text" style={{ fontWeight: 'bold', textAlign: 'center', margin: 0 }}>- Michael Lee</p>
+          </div>
+          <div style={{ background: '#fff', borderRadius: '18px', padding: '32px 24px', maxWidth: '400px', minWidth: '260px', boxShadow: '0 4px 16px rgba(25,118,210,0.12)', textAlign: 'center' }}>
+            <p className="testimonial-text" style={{ fontStyle: 'italic', marginBottom: '18px', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>
+              “Finding the right car parts can be a nightmare — I had tried multiple suppliers with no success. The team’s knowledge and network were outstanding; they located the part quickly and at a fair price.”
+            </p>
+            <p className="testimonial-text" style={{ fontWeight: 'bold', textAlign: 'center', margin: 0 }}>- Serena Manolo</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
