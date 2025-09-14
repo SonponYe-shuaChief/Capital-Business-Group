@@ -135,7 +135,7 @@ function Services() {
       <motion.section initial="hidden" animate="visible" variants={sectionVariants} className="services-section">
         <h2 className="services-section-title">Vehicle Maintenance & Repair</h2>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth: '900px', margin: '0 auto 28px auto', gap: '32px', background: 'rgba(25, 118, 210, 0.13)', borderRadius: '18px', padding: '28px 24px' }}>
-          <img src={maintenanceImg} alt="Maintenance" style={{ width: '120px', height: '120px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }} />
+          <img src={maintenanceImg} alt="Maintenance" style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '24px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)' }} />
           <div style={{ fontSize: '1.18rem', color: '#f8fcffff', textAlign: 'left' }}>
             <strong>Comprehensive Vehicle Maintenance & Repair</strong><br />
             We offer a full range of maintenance and repair services, including routine servicing, MOT preparation, diagnostics, brake and suspension repairs, tyre fitting, air-conditioning, and more. Our skilled technicians use state-of-the-art diagnostic tools and follow manufacturer specifications to ensure your car gets the care it deserves.
@@ -154,7 +154,7 @@ function Services() {
       <motion.section initial="hidden" animate="visible" variants={sectionVariants} className="services-section">
         <h2 className="services-section-title">Parts & Accessories</h2>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth: '900px', margin: '0 auto 28px auto', gap: '32px', background: 'rgba(25, 118, 210, 0.13)', borderRadius: '18px', padding: '28px 24px' }}>
-          <img src={partsImg} alt="Parts" style={{ width: '120px', height: '120px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }} />
+          <img src={partsImg} alt="Parts" style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '24px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)' }} />
           <div style={{ fontSize: '1.18rem', color: '#f8fcffff', textAlign: 'left' }}>
             <strong>Quality Parts & Accessories</strong><br />
             We stock and supply a wide range of vehicle parts and accessories for all major makes and models. From genuine OEM parts to high-quality aftermarket options, our knowledgeable team helps you choose the right part first time—saving you time and money.
@@ -173,7 +173,7 @@ function Services() {
       <motion.section initial="hidden" animate="visible" variants={sectionVariants} className="services-section">
         <h2 className="services-section-title">Online Ordering & Delivery</h2>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', maxWidth: '900px', margin: '0 auto 28px auto', gap: '32px', background: 'rgba(25, 118, 210, 0.13)', borderRadius: '18px', padding: '28px 24px' }}>
-          <img src={onlineImg} alt="Online" style={{ width: '120px', height: '120px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)' }} />
+          <img src={onlineImg} alt="Online" style={{ width: '220px', height: '220px', objectFit: 'cover', borderRadius: '24px', boxShadow: '0 8px 32px rgba(0,0,0,0.16)' }} />
           <div style={{ fontSize: '1.18rem', color: '#f8fcffff', textAlign: 'left' }}>
             <strong>Online Retail & Delivery</strong><br />
             We make it easy for customers to access the parts and accessories they need—wherever they are. Flexible ordering options, nationwide delivery, and trade support make our online service convenient, fast, and reliable for everyone.
