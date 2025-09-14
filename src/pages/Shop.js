@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 import { FaCarBattery, FaCarSide, FaCarCrash, FaCogs, FaToolbox } from 'react-icons/fa';
 
 const products = [
-  { id: 1, name: 'OEM Battery', price: '£120', icon: <FaCarBattery size={64} color="#E67E22" />, category: 'Batteries' },
-  { id: 2, name: 'Tyre Set', price: '£250', icon: <FaCarSide size={64} color="#E67E22" />, category: 'Tyres' },
-  { id: 3, name: 'Brake Pads', price: '£60', icon: <FaCarCrash size={64} color="#E67E22" />, category: 'Brakes' },
-  { id: 4, name: 'Suspension Kit', price: '£180', icon: <FaCogs size={64} color="#E67E22" />, category: 'Suspension' },
-  { id: 5, name: 'Car Accessory Pack', price: '£40', icon: <FaToolbox size={64} color="#E67E22" />, category: 'Accessories' },
+  { id: 1, name: 'OEM Battery', price: '£120', icon: <FaCarBattery size={64} color="#182b50" />, category: 'Batteries' },
+  { id: 2, name: 'Tyre Set', price: '£250', icon: <FaCarSide size={64} color="#182b50" />, category: 'Tyres' },
+  { id: 3, name: 'Brake Pads', price: '£60', icon: <FaCarCrash size={64} color="#182b50" />, category: 'Brakes' },
+  { id: 4, name: 'Suspension Kit', price: '£180', icon: <FaCogs size={64} color="#182b50" />, category: 'Suspension' },
+  { id: 5, name: 'Car Accessory Pack', price: '£40', icon: <FaToolbox size={64} color="#182b50" />, category: 'Accessories' },
 ];
 
 const cardVariants = {
