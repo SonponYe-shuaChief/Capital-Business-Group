@@ -2,7 +2,7 @@ import React from 'react';
 import expImg from '../assets/images/experience.jpeg';
 import techImg from '../assets/images/technicians.jpeg';
 import supplierImg from '../assets/images/1.jpeg';
-import onlineImg from '../assets/images/online expert.jpeg';
+import onlineImg from '../assets/images/online-expert.jpeg';
 import { motion } from 'framer-motion';
 
 const cardVariants = {

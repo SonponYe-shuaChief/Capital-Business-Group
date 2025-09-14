@@ -8,10 +8,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const carouselImages = [
-  require('../assets/images/quick turnaround.jpeg'),
-  require('../assets/images/customer service.jpeg'),
-  
-  require('../assets/images/online expert.jpeg'),
+  require('../assets/images/quick-turnaround.jpeg'),
+  require('../assets/images/customer-service.jpeg'),
+  require('../assets/images/online-expert.jpeg'),
 ];
 
 function ImageCarousel() {
