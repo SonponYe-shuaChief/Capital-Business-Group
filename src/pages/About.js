@@ -86,6 +86,7 @@ function About() {
           z-index: 3;
           text-align: center;
           padding: 48px 32px;
+          color:white;
         }
         .about-card-content h3 {
           font-size: 2rem;
