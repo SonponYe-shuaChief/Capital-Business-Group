@@ -299,7 +299,7 @@ function Home() {
         <div>
           <motion.h1 className="home-title" initial="hidden" animate="visible" variants={heroVariants}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={'/images/capital.png'} alt="Logo" style={{ height: '190px', width: '190px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
+              <img src={'/images/capital.jpg'} alt="Logo" style={{ height: '190px', width: '190px', objectFit: 'contain', borderRadius: '18px', boxShadow: '0 4px 24px rgba(0,0,0,0.18)', marginBottom: '18px' }} />
               <span style={{ color: '#fff' }}>Capital Business Group</span>
             </div>
           </motion.h1>
@@ -307,14 +307,14 @@ function Home() {
             Your trusted partner for vehicle repairs, parts, and online ordering.
           </motion.p>
           <div className="home-cta-group" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Link to="/contact" className="btn btn-primary"><FaTools style={{ marginRight: 8 }} /> Book a Service</Link>
+            <Link to="/contact" className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><FaTools style={{ marginRight: 8 }} /> Book a Service</Link>
             {/* <Link to="/shop" className="btn btn-secondary"><FaBoxes style={{ marginRight: 8 }} /> Order Parts</Link> */}
           </div>
         </div>
       </section>
       {/* Professional Team Image After Hero */}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', margin: '40px 0' }}>
-  <img src={'/images/quick-turnaround.jpeg'} alt="Reliability" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(25,118,210,0.13)', opacity: 0.93 }} />
+  <img src={'/images/talking.jpeg'} alt="Reliability" style={{ width: '820px', height: '320px', maxWidth: '96vw', objectFit: 'cover', borderRadius: '38px', boxShadow: '0 8px 32px rgba(25,118,210,0.13)', opacity: 0.93 }} />
       </div>
       
 

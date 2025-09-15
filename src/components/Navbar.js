@@ -57,7 +57,28 @@ function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <img src={logo} alt="Logo" style={{ height: '72px', width: '72px', objectFit: 'contain', borderRadius: '15px', boxShadow: '0 2px 12px rgba(0,0,0,0.12)' }} />
-          <span style={{ fontWeight: 'bold', fontSize: '1.05rem', color: '#03071fff' }}>Driving Trust.. Delivering Solutions</span>
+          <span
+            style={{
+              fontWeight: 'bold',
+              fontSize: '1.05rem',
+              color: '#03071fff',
+              whiteSpace: 'nowrap',
+              maxWidth: '100%',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              display: 'block'
+            }}
+            className="navbar-slogan"
+          >
+            Driving Trust.. Delivering Solutions
+          </span>
+          <style>{`
+            @media (max-width: 600px) {
+              .navbar-slogan {
+                font-size: 0.75rem !important;
+              }
+            }
+          `}</style>
         </Link>
         {/* Hamburger for mobile */}
         <button
@@ -78,7 +99,14 @@ function Navbar() {
               <Link
                 to={link.path}
                 className={`navbar-link${activeTab === link.path ? ' active tab-animate' : ''}`}
-                style={{ padding: '10px 28px', fontSize: '1.28rem', minHeight: '54px', display: 'flex', alignItems: 'center' }}
+                style={{
+                  padding: link.name === 'Why Choose Us' ? '10px 16px' : '10px 28px',
+                  fontSize: link.name === 'Why Choose Us' ? '1.1rem' : '1.28rem',
+                  minHeight: '54px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  whiteSpace: 'nowrap'
+                }}
               >
                 {link.name}
               </Link>
