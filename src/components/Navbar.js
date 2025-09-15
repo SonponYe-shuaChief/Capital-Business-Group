@@ -55,7 +55,7 @@ function Navbar() {
   return (
     <nav className={`navbar fade-navbar${visible ? ' fade-in' : ' fade-out'}`}> 
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+  <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginRight: '48px' }}>
           <img src={logo} alt="Logo" style={{ height: '72px', width: '72px', objectFit: 'contain', borderRadius: '15px', boxShadow: '0 2px 12px rgba(0,0,0,0.12)' }} />
           <span
             style={{
@@ -75,7 +75,7 @@ function Navbar() {
           <style>{`
             @media (max-width: 600px) {
               .navbar-slogan {
-                font-size: 0.75rem !important;
+                font-size: 0.6rem !important;
               }
             }
           `}</style>
@@ -100,12 +100,14 @@ function Navbar() {
                 to={link.path}
                 className={`navbar-link${activeTab === link.path ? ' active tab-animate' : ''}`}
                 style={{
-                  padding: link.name === 'Why Choose Us' ? '10px 16px' : '10px 28px',
-                  fontSize: link.name === 'Why Choose Us' ? '1.1rem' : '1.28rem',
+                  padding: '10px 36px', // Increased padding for all tabs
+                  fontSize: '1.25rem', // Uniform font size
                   minHeight: '54px',
                   display: 'flex',
                   alignItems: 'center',
-                  whiteSpace: 'nowrap'
+                  whiteSpace: 'nowrap',
+                  border: link.name === 'Why Choose Us' ? '2.5px solid #ffffffff' : 'none', // Thicker border for Why Choose Us
+                  boxSizing: 'border-box'
                 }}
               >
                 {link.name}

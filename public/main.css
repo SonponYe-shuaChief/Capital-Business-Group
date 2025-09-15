@@ -61,7 +61,7 @@ body {
 .navbar-link:hover,
 .navbar-link.active {
 	color: #fff;
-	background: #66a6e6;
+	background: #03071fff;
 }
 
 /* Hamburger styles */
@@ -127,7 +127,7 @@ body {
 	display: block;
 }
 .navbar-link.mobile.active {
-	background: #1976D2;
+	background: #03071fff;
 	color: #fff;
 }
 .navbar-link.mobile:hover {

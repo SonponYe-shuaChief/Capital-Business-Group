@@ -159,10 +159,10 @@ function About() {
               }
             }
           `}</style>
-          <span style={{ fontSize: '1.85rem', fontWeight: '900', color: '#1a0652ff', display: 'block', marginBottom: '18px' }}>Passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</span>
+          <span style={{ fontSize: '1.85rem', fontWeight: '900', color: '#1a0652ff', display: 'block', marginBottom: '18px', textAlign: 'center' }}>Passionate about keeping drivers on the road safely, affordably, and with complete peace of mind.</span>
           <span style={{ display: 'block', marginBottom: '18px' }}>With years of experience in the automotive sector, we provide a comprehensive range of services — from vehicle repairs and maintenance, to retailing high-quality parts and accessories, to convenient online ordering and delivery.</span>
           <span style={{ fontSize: '1.35rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', margin: '32px 0 12px 0' }}>Our Mission</span>
-          <ul style={{ margin: '0 0 24px 24px', fontSize: '1.00rem', color: '#1976D2', lineHeight: '2.1' }}>
+          <ul style={{ margin: '0 0 24px 24px', fontSize: '1.37rem', color: '#1976D2', lineHeight: '2.1' }}>
             <li><strong>Reliability:</strong> Deliver top-quality work and products you can trust.</li>
             <li><strong>Convenience:</strong> Make car care easy with both in-person and online solutions.</li>
             <li><strong>Customer-first service:</strong> Put you back on the road quickly and confidently.</li>
@@ -172,7 +172,7 @@ function About() {
           <span style={{ display: 'block', marginBottom: '18px' }}>Experience isn’t just about the number of years we’ve been in business — it’s about the knowledge, skill, and trust we’ve built with every customer we’ve served.</span>
           <span style={{ display: 'block', marginBottom: '18px' }}>With close to a decade of experience in the automotive industry, we’ve worked on everything from small family cars to commercial fleets. Our technicians are fully trained and stay up to date with the latest vehicle technology, ensuring we can service modern vehicles with complex electronic systems as well as older, classic models.</span>
           <span style={{ fontSize: '2rem', fontWeight: 'bold', color: '#0A3D62', display: 'block', margin: '32px 0 12px 0', textAlign: 'center' }}>Our Track Record</span>
-          <ul style={{ margin: '0 0 24px 24px', fontSize: '1.00rem', color: '#1976D2', lineHeight: '2.1' }}>
+          <ul style={{ margin: '0 0 24px 24px', fontSize: '1.37rem', color: '#1976D2', lineHeight: '2.1' }}>
             <li>Thousands of vehicles serviced — from routine MOTs to major repairs</li>
             <li>Long-standing supplier relationships — allowing us to source genuine and aftermarket parts quickly and at competitive prices</li>
             <li>Trusted by individuals and businesses — including fleet operators, car enthusiasts, and garages across the UK</li>
