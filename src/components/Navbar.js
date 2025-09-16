@@ -62,7 +62,6 @@ function Navbar() {
               fontWeight: 'bold',
               fontSize: '1.05rem',
               color: '#03071fff',
-              whiteSpace: 'nowrap',
               maxWidth: '100%',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
@@ -76,6 +75,10 @@ function Navbar() {
             @media (max-width: 600px) {
               .navbar-slogan {
                 font-size: 0.6rem !important;
+                max-width: 80px;
+                white-space: normal !important;
+                line-height: 1.1;
+                word-break: break-word;
               }
             }
           `}</style>
