@@ -2,6 +2,31 @@ import React from 'react';
 const bgImg = '/images/1.jpeg';
 
 function Contact() {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form[0].value;
+    const email = form[1].value;
+    const phone = form[2].value;
+    const vehicle = form[3].value;
+    const message = form[4].value;
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL || "/api/contact";
+      const res = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, vehicle, message })
+      });
+      if (res.ok) {
+        alert("Message sent!");
+        form.reset();
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch {
+      alert("Failed to send message.");
+    }
+  };
   return (
     <div className="contact-bg contact-bg-img">
       <style>{`
@@ -185,7 +210,7 @@ function Contact() {
       <h1 className="contact-title">Contact / Book Service</h1>
       <div className="contact-main">
         {/* Booking Form */}
-        <form className="contact-form">
+  <form className="contact-form" onSubmit={handleSubmit}>
           <h2 className="form-title">Book a Service</h2>
           <input type="text" placeholder="Name" className="form-input" required />
           <input type="email" placeholder="Email" className="form-input" required />
