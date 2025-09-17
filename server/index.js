@@ -11,6 +11,10 @@ app.use(express.json());
 
 app.use("/api/contact", contactRouter);
 
+app.get("/", (req, res) => {
+  res.send("✅ Capital Business Group backend is running.");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
