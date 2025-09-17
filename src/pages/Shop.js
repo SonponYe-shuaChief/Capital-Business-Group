@@ -49,59 +49,66 @@ function Shop() {
     <div className="shop-bg">
       <style>{`
         .shop-bg {
-          background: #fff;
+          background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+          min-height: 100vh;
           padding: 48px 16px;
         }
         .shop-title {
-          font-size: 2rem;
+          font-size: 2.5rem;
           font-weight: bold;
-          color: #0A3D62;
-          margin-bottom: 24px;
+          color: #E67E22;
+          margin-bottom: 32px;
           text-align: center;
+          letter-spacing: 2px;
+          text-shadow: 0 2px 16px rgba(10,61,98,0.12);
         }
         .shop-controls {
           display: flex;
           flex-wrap: wrap;
           gap: 16px;
-          margin-bottom: 32px;
+          margin-bottom: 40px;
           justify-content: center;
           align-items: center;
         }
-        .shop-select {
-          border: 1px solid #636E72;
-          border-radius: 6px;
-          padding: 10px;
-          font-size: 1rem;
+        .shop-select, .shop-search {
+          border: 2px solid #E67E22;
+          border-radius: 10px;
+          padding: 12px;
+          font-size: 1.1rem;
+          background: #fff8f0;
+          color: #0A3D62;
+          box-shadow: 0 2px 8px rgba(230,126,34,0.08);
+          outline: none;
+          transition: border 0.2s, box-shadow 0.2s;
         }
-        .shop-search {
-          border: 1px solid #636E72;
-          border-radius: 6px;
-          padding: 10px;
-          font-size: 1rem;
-          min-width: 200px;
+        .shop-select:focus, .shop-search:focus {
+          border: 2px solid #182b50;
+          box-shadow: 0 4px 16px rgba(25,118,210,0.10);
         }
         .shop-grid {
           display: flex;
           flex-wrap: wrap;
-          gap: 32px;
+          gap: 40px;
           justify-content: center;
         }
         .shop-card.shop-card-large {
-          background: #f8f9fa;
-          border-radius: 18px;
-          padding: 48px 32px;
-          box-shadow: 0 8px 32px rgba(230,126,34,0.18);
+          background: linear-gradient(120deg, #fff 60%, #fbeee6 100%);
+          border-radius: 22px;
+          padding: 56px 36px;
+          box-shadow: 0 8px 32px rgba(230,126,34,0.18), 0 2px 8px rgba(25,118,210,0.06);
           display: flex;
           flex-direction: column;
           align-items: center;
           min-width: 260px;
           max-width: 340px;
           min-height: 320px;
-          transition: box-shadow 0.2s, transform 0.2s;
+          transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+          border: 2px solid #E67E22;
         }
         .shop-card.shop-card-large:hover {
-          box-shadow: 0 16px 48px rgba(230,126,34,0.22);
-          transform: scale(1.04) translateY(-6px);
+          box-shadow: 0 16px 48px rgba(230,126,34,0.28), 0 4px 16px rgba(25,118,210,0.10);
+          transform: scale(1.06) translateY(-8px);
+          background: linear-gradient(120deg, #fffbe6 40%, #ffe5d0 100%);
         }
         .shop-icon {
           margin-bottom: 18px;
@@ -109,60 +116,66 @@ function Shop() {
           align-items: center;
           justify-content: center;
           font-size: 4rem;
-          color: #0f161fff;
-          transition: transform 0.2s;
+          color: #E67E22;
+          filter: drop-shadow(0 2px 8px #e67e2233);
+          transition: transform 0.2s, color 0.2s;
         }
         .shop-card-title {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
           font-weight: bold;
-          color: #0A3D62;
+          color: #182b50;
           margin-bottom: 12px;
           text-align: center;
+          letter-spacing: 1px;
         }
         .shop-card-price {
-          color: #636E72;
+          color: #E67E22;
           margin-bottom: 16px;
-          font-size: 1.1rem;
+          font-size: 1.15rem;
+          font-weight: 600;
         }
         .btn.btn-primary {
-          background: #182b50ff;
+          background: linear-gradient(90deg, #E67E22 60%, #182b50 100%);
           color: #fff;
-          font-size: 1.05rem;
-          padding: 12px 32px;
-          border-radius: 8px;
-          font-weight: 600;
+          font-size: 1.08rem;
+          padding: 14px 36px;
+          border-radius: 10px;
+          font-weight: 700;
           border: none;
           cursor: pointer;
           box-shadow: 0 2px 8px rgba(230,126,34,0.12);
-          transition: background 0.2s;
+          transition: background 0.2s, box-shadow 0.2s;
         }
         .btn.btn-primary:hover {
-          background: #d35400;
+          background: linear-gradient(90deg, #182b50 60%, #E67E22 100%);
+          box-shadow: 0 4px 16px rgba(25,118,210,0.10);
         }
         .btn.btn-secondary {
-          background: #fff;
-          color: #0A3D62;
+          background: #fff8f0;
+          color: #E67E22;
           border: 2px solid #E67E22;
-          font-size: 0.9rem;
-          padding: 4px 12px;
+          font-size: 1rem;
+          padding: 6px 16px;
           border-radius: 8px;
           font-weight: 600;
           cursor: pointer;
-          transition: background 0.2s, color 0.2s;
+          transition: background 0.2s, color 0.2s, border 0.2s;
         }
         .btn.btn-secondary:hover {
           background: #E67E22;
           color: #fff;
+          border: 2px solid #182b50;
         }
         .shop-cart {
-          margin-top: 32px;
-          background: #fff;
-          border-radius: 12px;
-          box-shadow: 0 2px 8px rgba(99,110,114,0.08);
-          padding: 24px;
-          max-width: 400px;
+          margin-top: 40px;
+          background: linear-gradient(120deg, #fff 60%, #e0e7ff 100%);
+          border-radius: 16px;
+          box-shadow: 0 2px 8px rgba(99,110,114,0.10);
+          padding: 32px;
+          max-width: 420px;
           margin-left: auto;
           margin-right: auto;
+          border: 2px solid #E67E22;
         }
       `}</style>
       <h1 className="shop-title">Shop Parts & Accessories</h1>
