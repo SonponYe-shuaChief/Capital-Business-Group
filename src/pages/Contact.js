@@ -1,5 +1,6 @@
-import React from 'react';
-const bgImg = '/images/1.jpeg';
+// pages/Contact.js
+import React from "react";
+const bgImg = "/images/1.jpeg";
 
 function Contact() {
   const handleSubmit = async (e) => {
@@ -10,23 +11,30 @@ function Contact() {
     const phone = form[2].value;
     const vehicle = form[3].value;
     const message = form[4].value;
+
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || "/api/contact";
+      // ✅ Correct backend endpoint
+      const apiUrl = "https://capital-business-group.onrender.com/api/contact";
+
       const res = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, vehicle, message })
+        body: JSON.stringify({ name, email, phone, vehicle, message }),
       });
+
       if (res.ok) {
-        alert("Message sent!");
+        alert("✅ Message sent!");
         form.reset();
       } else {
-        alert("Failed to send message.");
+        const err = await res.json();
+        alert("❌ Failed: " + (err.error || "Unknown error"));
       }
-    } catch {
-      alert("Failed to send message.");
+    } catch (err) {
+      alert("⚠️ Error sending message. Please try again later.");
+      console.error("Contact form error:", err);
     }
   };
+
   return (
     <div className="contact-bg contact-bg-img">
       <style>{`
@@ -58,10 +66,6 @@ function Contact() {
           background: rgba(10, 10, 30, 0.55);
           z-index: 1;
         }
-        .contact-bg-img > * {
-          position: relative;
-          z-index: 2;
-        }
         .contact-title {
           color: #fff;
           text-shadow: 0 2px 16px rgba(10,61,98,0.18);
@@ -79,12 +83,12 @@ function Contact() {
           margin: 0 auto 48px auto;
           justify-content: center;
           align-items: stretch;
-         width: 95%;
+          width: 95%;
         }
         .contact-form {
           background: #f8fcff;
           border-radius: 24px;
-          padding: 40px 40px;
+          padding: 40px;
           box-shadow: 0 8px 32px rgba(25,118,210,0.12);
           display: flex;
           flex-direction: column;
@@ -94,8 +98,8 @@ function Contact() {
           max-width: 520px;
           align-items: center;
           border: 1px solid #e3eaf5;
+          min-height: 420px;
         }
-            min-height: 420px;
         .form-title {
           font-size: 1.5rem;
           font-weight: bold;
@@ -126,91 +130,24 @@ function Contact() {
         .btn.btn-primary:hover {
           background: #d35400;
         }
-        .contact-info-group {
-          display: flex;
-          flex-direction: column;
-          gap: 32px;
-          flex: 1;
-          min-width: 320px;
-          max-width: 480px;
-        }
-            justify-content: stretch;
-        .contact-info {
-          background: #f4f6fa;
-          color: #222;
-          border-radius: 24px;
-          padding: 48px 40px;
-          box-shadow: 0 4px 16px rgba(25,118,210,0.10);
-          border: 1px solid #e3eaf5;
-        }
-            min-height: 420px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        .info-title {
-          font-size: 1.3rem;
-          font-weight: bold;
-          margin-bottom: 12px;
-          color: #1976D2;
-        }
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 24px;
-            text-align: left;
-        .info-link {
-          color: #1976D2;
-          text-decoration: underline;
-          transition: color 0.2s;
-        }
-        .info-link:hover {
-          color: #E67E22;
-        }
-        .contact-map {
-          background: #f8fcff;
-          border-radius: 32px;
-          padding: 30px 30px;
-          box-shadow: 0 8px 32px rgba(25,118,210,0.12);
-          max-width: 1400px;
-            width: 95vw;
-          margin: 0 auto 48px auto;
-          border: 1px solid #e3eaf5;
-        }
-        .map-title {
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-bottom: 18px;
-          color: #1976D2;
-        }
-        .map-embed iframe {
-          width: 100%;
-          min-width: 300px;
-            max-width: 95vw;
-          height: 400px;
-          border: none;
-          border-radius: 18px;
-        }
         @media (max-width: 900px) {
           .contact-main {
             flex-direction: column;
             align-items: center;
             max-width: 98vw;
           }
-          .contact-form,
-          .contact-info-group {
+          .contact-form {
             min-width: 260px;
             max-width: 98vw;
           }
-          .contact-map {
-            max-width: 98vw;
-            padding: 24px 8px;
-          }
         }
       `}</style>
+
       <div className="contact-overlay"></div>
       <h1 className="contact-title">Contact / Book Service</h1>
       <div className="contact-main">
         {/* Booking Form */}
-  <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <h2 className="form-title">Book a Service</h2>
           <input type="text" placeholder="Name" className="form-input" required />
           <input type="email" placeholder="Email" className="form-input" required />
@@ -219,10 +156,7 @@ function Contact() {
           <textarea placeholder="Service Request" className="form-input" rows={3} required />
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        {/* Contact Info */}
-   
       </div>
-     
     </div>
   );
 }
