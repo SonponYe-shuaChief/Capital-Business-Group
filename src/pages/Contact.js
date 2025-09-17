@@ -3,25 +3,24 @@ import React from "react";
 const bgImg = "/images/1.jpeg";
 
 function Contact() {
+  const [loading, setLoading] = React.useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
+    setLoading(true);
     const form = e.target;
     const name = form[0].value;
     const email = form[1].value;
     const phone = form[2].value;
     const vehicle = form[3].value;
     const message = form[4].value;
-
     try {
-      // ✅ Correct backend endpoint
       const apiUrl = "https://capital-business-group.onrender.com/api/contact";
-
       const res = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, phone, vehicle, message }),
       });
-
       if (res.ok) {
         alert("✅ Message sent!");
         form.reset();
@@ -32,6 +31,8 @@ function Contact() {
     } catch (err) {
       alert("⚠️ Error sending message. Please try again later.");
       console.error("Contact form error:", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -145,17 +146,41 @@ function Contact() {
 
       <div className="contact-overlay"></div>
       <h1 className="contact-title">Contact / Book Service</h1>
-      <div className="contact-main">
+      <div className="contact-main" style={{ position: 'relative' }}>
         {/* Booking Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <h2 className="form-title">Book a Service</h2>
-          <input type="text" placeholder="Name" className="form-input" required />
-          <input type="email" placeholder="Email" className="form-input" required />
-          <input type="tel" placeholder="Phone" className="form-input" required />
-          <input type="text" placeholder="Vehicle Details" className="form-input" required />
-          <textarea placeholder="Service Request" className="form-input" rows={3} required />
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <input type="text" placeholder="Name" className="form-input" required disabled={loading} />
+          <input type="email" placeholder="Email" className="form-input" required disabled={loading} />
+          <input type="tel" placeholder="Phone" className="form-input" required disabled={loading} />
+          <input type="text" placeholder="Vehicle Details" className="form-input" required disabled={loading} />
+          <textarea placeholder="Service Request" className="form-input" rows={3} required disabled={loading} />
+          <button type="submit" className="btn btn-primary" disabled={loading}>{loading ? "Sending..." : "Submit"}</button>
         </form>
+        {loading && (
+          <div style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(255,255,255,0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 10,
+            borderRadius: 24
+          }}>
+            <div style={{
+              padding: 32,
+              background: '#fff',
+              borderRadius: 16,
+              boxShadow: '0 2px 16px rgba(25,118,210,0.10)',
+              fontSize: 20,
+              color: '#E67E22',
+              fontWeight: 600
+            }}>
+              Sending your message...
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
