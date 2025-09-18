@@ -15,7 +15,8 @@ function Contact() {
     const vehicle = form[3].value;
     const message = form[4].value;
     try {
-      const apiUrl = "https://capital-business-group.onrender.com/api/contact";
+      const apiUrl = "https://api.capital-businessgroup.com/api/contact";
+
       const res = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
