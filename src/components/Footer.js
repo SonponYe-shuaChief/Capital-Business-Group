@@ -16,7 +16,7 @@ function Footer() {
           {/* <Link to="/shop" className="footer-link" style={{ color: '#fff', textDecoration: 'none', fontSize: '1rem', marginBottom: '2px' }}>Shop</Link> */}
         </div>
         <div className="footer-contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', minWidth: '220px', gap: '6px' }}>
-         
+          </div>
       </div>
     </footer>
   );
