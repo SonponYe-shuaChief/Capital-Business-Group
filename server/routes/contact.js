@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: process.env.EMAIL_FROM || "noreply@capital-businessgroup.com", // safer, configurable
+      from: "noreply@capital-businessgroup.com", // safer, configurable
       
       to: process.env.EMAIL_TO || "capitalbusinessgroup@outlook.com",
       subject: `📩 New Contact Form Submission from ${name}`,
