@@ -16,7 +16,7 @@ function Footer() {
           {/* <Link to="/shop" className="footer-link" style={{ color: '#fff', textDecoration: 'none', fontSize: '1rem', marginBottom: '2px' }}>Shop</Link> */}
         </div>
         <div className="footer-contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', minWidth: '220px', gap: '6px' }}>
-          <span style={{ fontSize: '1rem' }}>Phone: <a href="tel:+1234567890" className="footer-contact-link" style={{ color: '#fff', textDecoration: 'underline' }}>+1 234 567 890</a></span>
+         // <span style={{ fontSize: '1rem' }}>Phone: <a href="tel:+1234567890" className="footer-contact-link" style={{ color: '#fff', textDecoration: 'underline' }}>+1 234 567 890</a></span>
           <span style={{ fontSize: '1rem' }}>Email: <a href="mailto:capitalbusinessgroup@outlook.com" className="footer-contact-link" style={{ color: '#fff', textDecoration: 'underline' }}>capitalbusinessgroup@outlook.com</a></span>
         </div>
       </div>
