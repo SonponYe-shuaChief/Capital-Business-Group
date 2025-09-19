@@ -193,7 +193,7 @@ function WhyChooseUs() {
           </div>
           <div style={{ background: '#fff', borderRadius: '18px', padding: '32px 24px', maxWidth: '400px', minWidth: '260px', boxShadow: '0 4px 16px rgba(25,118,210,0.12)', textAlign: 'center' }}>
             <p className="testimonial-text" style={{ fontStyle: 'italic', marginBottom: '18px', textAlign: 'center', fontWeight: 500, fontSize: '1.1rem' }}>
-              Amazing service!! smooth transaction good customer care!!! great service. would definitely come back.”
+              Amazing service!! smooth transaction and good customer care!!! great service. Would definitely come back.”
             </p>
             <p className="testimonial-text" style={{ fontWeight: 'bold', textAlign: 'center', margin: 0 }}>- Jerome Thando</p>
           </div>
