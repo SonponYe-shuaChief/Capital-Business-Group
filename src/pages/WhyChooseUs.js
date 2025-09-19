@@ -17,7 +17,7 @@ const cardVariants = {
 const reasons = [
   { title: 'Trusted Expertise', desc: 'Decades of combined experience and proven results.', img: expImg },
   { title: 'Complete Solution', desc: 'From repairs to parts and online ordering.', img: supplierImg },
-  { title: 'Quick Turnaround', desc: 'Fast, efficient service to minimize downtime.', img: techImg },
+  { title: 'Quick Turnaround', desc: 'Fast, efficient service to minimise downtime.', img: techImg },
   { title: 'Transparent Pricing', desc: 'Clear, honest pricing for every service.', img: onlineImg },
   { title: 'Nationwide Reach', desc: 'Serving customers across the country.', img: supplierImg },
 ];
